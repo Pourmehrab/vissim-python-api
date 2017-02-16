@@ -1,0 +1,14 @@
+$SIGNAL_GROUPS
+$
+   K1  1
+   
+$STAGES
+Stage        Signal group
+$
+Stage_1		K1
+
+$STARTING_STAGE
+$
+Stage_1
+
+$END

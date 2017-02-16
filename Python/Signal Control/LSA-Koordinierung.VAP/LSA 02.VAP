@@ -1,0 +1,34 @@
+PROGRAM LSA_02; /* D:\Data\VISSIM\SignalControl\Signal-Coordination\LSA_02.vv */
+
+VAP_FREQUENCY 1;
+
+
+/* ARRAYS */ 
+
+/* UNTERPROGRAMME */ 
+
+/* SIGNALPROGRAMM-ABHAENGIGE PARAMETER */ 
+            
+/* AUSDRUECKE */ 
+            minGrPh1 := T_grün( K1 ) >= T_grün_min( K1 );
+            minGrPh2 := T_grün(F21 ) >= T_grün_min( F21 );
+
+/* HAUPTPROGRAMM */ 
+
+S00Z001:    angefordPh := Marke_lesen( 11 );
+S00Z002:    IF Phase_läuft( 1 ) THEN
+S01Z002:      IF minGrPh1 THEN
+S02Z002:        IF angefordPh = 2 THEN
+S03Z002:          Pue( 1, 2 )
+                END
+              END
+            END;
+S00Z004:    IF Phase_läuft( 2 ) THEN
+S01Z004:      IF minGrPh2 THEN
+S02Z004:        IF angefordPh = 1 THEN
+S03Z004:          Pue( 2, 1 )
+                END
+              END
+            END
+PROG_ENDE:    .
+/*----------------------------------------------------------------------------*/

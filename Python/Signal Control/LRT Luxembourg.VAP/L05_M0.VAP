@@ -1,0 +1,498 @@
+PROGRAM l05_m0; /* D:\Data\VISSIM-Install\600\Examples\Examples Training\Signal Control\LRT Luxembourg.VAP\l05_m0.vv */
+
+VAP_FREQUENCY 1;
+
+CONST 
+            MAX_GAP = 3,
+            MAX_GAP_K2 = 4,
+            T_QUEUE_1_5 = 8,
+            T_QUEUE_2 = 8,
+            MAX_WT_2 = 90,
+            MAX_WT_1_5 = 100,
+            MAX_WT_PED = 75,
+            TTnT = 30,
+            CANCELTIME = 30;
+
+/* ARRAYS */ 
+
+/* UNTERPROGRAMME */ 
+
+SUBROUTINE LDP_MODULE;  /* L05_M2.vv */
+D01S00Z001: RecVal( 1, RemTime ); RecVal( 2, Stg2 );
+D01S00Z002: RecVal( 11, Queue_K1 ); RecVal( 12, Queue_K2 );
+D01S00Z003: RecVal( 15, Queue_K5 );
+D01S00Z004: RecVal( 21, Ext_K1K5 ); RecVal( 22, Ext_K2 );
+D01S00Z005: RecVal( 23, Ext_K3 );
+D01S00Z006: RecVal( 30, WT_EXC_K1K5 ); RecVal( 31, WT_EXC_K2 );
+D01S00Z007: RecVal( 32, WT_EXC_F22 ); RecVal( 33, WT_EXC_F24 );
+D01S00Z008: RecVal( 102, Prio_Stg2 );
+D01S00Z010: RecVal( 201, CallT );
+D01S00Z011: RecVal( 211, Cancel_51 );
+D01S00Z012: RecVal( 212, Cancel_52 );
+D01S00Z013: TWait := T_Wait;
+D01S00Z014: RecVal( 213, TWait )
+D01PROG_ENDE: .
+/*----------------------------------------------------------------------------*/
+
+SUBROUTINE PT_MODULE;  /* L05_M1.vv */
+D02S00Z001: IF NOT Init_PT THEN
+D02S01Z001:   Init_PT := 1;
+D02S01Z002:   RemTime := 99
+            END;
+D02S00Z004: IF Call(511) THEN
+D02S01Z004:   Call511 := 1
+            END;
+D02S00Z006: IF Call(521) THEN
+D02S01Z006:   Call521 := 1
+            END;
+D02S00Z008: IF ( T_Wait >= 6 ) THEN
+D02S01Z008:   Stop( T_Wait ); Reset( T_Wait );
+D02S01Z009:   IF Cancel_51 THEN
+D02S02Z009:     Cancel_51 := 0;
+D02S03Z009:     ReCall511 := 1
+              ELSE
+D02S01Z010:     IF Cancel_52 THEN
+D02S02Z010:       Cancel_52 := 0;
+D02S03Z010:       ReCall521 := 1
+                END
+              END
+            END;
+D02S00Z012: IF Tg( 51 ) > CANCELTIME THEN
+D02S01Z012:   IF NOT Cancel_51 AND NOT Cancel_52 THEN
+D02S02Z012:     Cancel_51 := 1; Start( T_Wait );
+D02S02Z014:     Call519 := 1;
+D02S02Z015:     Cancel := 1
+              ELSE
+D02S00Z014:     IF Call( 519 ) THEN
+D02S01Z014:       IF NOT Cancel_51 THEN
+                    GOTO D02S02Z014
+                  ELSE
+D02S01Z015:         Cancel_51 := 0
+                  END
+                END
+              END
+            ELSE
+              GOTO D02S00Z014
+            END;
+D02S00Z017: IF Tg( 52 ) > CANCELTIME THEN
+D02S01Z017:   IF NOT Cancel_51 AND NOT Cancel_52 THEN
+D02S02Z017:     Cancel_52 := 1; Start( T_Wait );
+D02S02Z019:     Call529 := 1;
+D02S02Z020:     Cancel := 1
+              ELSE
+D02S00Z019:     IF Call( 529 ) THEN
+D02S01Z019:       IF NOT Cancel_52 THEN
+                    GOTO D02S02Z019
+                  ELSE
+D02S01Z020:         Cancel_52 := 0
+                  END
+                END
+              END
+            ELSE
+              GOTO D02S00Z019
+            END;
+D02S00Z022: IF Call511 THEN
+D02S01Z022:   Call511 := 0;
+D02S01Z024:   IF CallT = 0 THEN
+D02S02Z024:     CallT := 1;
+D02S03Z024:     RemTime := TTnT
+              ELSE
+D02S01Z025:     IF CallT = 1 THEN
+D02S02Z025:       CallT := 2;
+D02S03Z025:       RemTime2 := TTnT
+                ELSE
+D02S01Z026:       IF CallT = 2 THEN
+D02S02Z026:         CallT := 3;
+D02S03Z026:         RemTime3 := TTnT
+                  ELSE
+D02S01Z027:         IF CallT = 3 THEN
+D02S02Z027:           CallT := 4;
+D02S03Z027:           RemTime4 := TTnT
+                    ELSE
+D02S01Z028:           IF CallT = 4 THEN
+D02S02Z028:             CallT := 5;
+D02S03Z028:             RemTime5 := TTnT
+                      ELSE
+D02S02Z029:             CallT := 6;
+D02S03Z029:             RemTime6 := TTnT
+                      END
+                    END
+                  END
+                END
+              END
+            END;
+D02S00Z031: IF Call521 THEN
+D02S01Z031:   Call521 := 0;
+              GOTO D02S01Z024
+            END;
+D02S00Z032: IF ReCall511 THEN
+D02S01Z032:   ReCall511 := 0;
+              GOTO D02S01Z024
+            END;
+D02S00Z033: IF ReCall521 THEN
+D02S01Z033:   ReCall521 := 0;
+              GOTO D02S01Z024
+            END;
+D02S00Z035: IF Call519 THEN
+D02S01Z035:   Call519 := 0;
+D02S01Z037:   IF CallT = 6 THEN
+D02S02Z037:     CallT := 5;
+D02S03Z037:     RemTime := RemTime2;
+D02S04Z037:     RemTime2 := RemTime3;
+D02S05Z037:     RemTime3 := RemTime4;
+D02S06Z037:     RemTime4 := RemTime5;
+D02S07Z037:     RemTime5 := RemTime6;
+D02S08Z037:     RemTime6 := 99
+              ELSE
+D02S01Z038:     IF CallT = 5 THEN
+D02S02Z038:       CallT := 4;
+D02S03Z038:       RemTime := RemTime2;
+D02S04Z038:       RemTime2 := RemTime3;
+D02S05Z038:       RemTime3 := RemTime4;
+D02S06Z038:       RemTime4 := RemTime5;
+D02S07Z038:       RemTime5 := 99
+                ELSE
+D02S01Z039:       IF CallT = 4 THEN
+D02S02Z039:         CallT := 3;
+D02S03Z039:         RemTime := RemTime2;
+D02S04Z039:         RemTime2 := RemTime3;
+D02S05Z039:         RemTime3 := RemTime4;
+D02S06Z039:         RemTime4 := 99
+                  ELSE
+D02S01Z040:         IF CallT = 3 THEN
+D02S02Z040:           CallT := 2;
+D02S03Z040:           RemTime := RemTime2;
+D02S04Z040:           RemTime2 := RemTime3;
+D02S05Z040:           RemTime3 := 99
+                    ELSE
+D02S01Z041:           IF CallT = 2 THEN
+D02S02Z041:             CallT := 1;
+D02S03Z041:             RemTime := RemTime2;
+D02S04Z041:             RemTime2 := 99
+                      ELSE
+D02S01Z042:             IF CallT = 1 THEN
+D02S02Z042:               CallT := 0;
+D02S03Z042:               RemTime := 99
+                        END
+                      END
+                    END
+                  END
+                END
+              END
+            END;
+D02S00Z044: IF Call529 THEN
+D02S01Z044:   Call529 := 0;
+              GOTO D02S01Z037
+            ELSE
+D02S00Z045:   IF CallT > 0 THEN
+D02S01Z045:     IF CallT >= 6 THEN
+D02S02Z045:       IF RemTime6 > 0 THEN
+D02S03Z045:         RemTime6 := RemTime6 -1;
+D02S02Z047:         IF RemTime5 > 0 THEN
+D02S03Z047:           RemTime5 := RemTime5 -1;
+D02S02Z049:           IF RemTime4 > 0 THEN
+D02S03Z049:             RemTime4 := RemTime4 -1;
+D02S02Z051:             IF RemTime3 > 0 THEN
+D02S03Z051:               RemTime3 := RemTime3 -1;
+D02S02Z053:               IF RemTime2 > 0 THEN
+D02S03Z053:                 RemTime2 := RemTime2 -1;
+D02S02Z055:                 IF RemTime > 0 THEN
+D02S03Z055:                   RemTime := RemTime -1
+                            END
+                          ELSE
+                            GOTO D02S02Z055
+                          END
+                        ELSE
+                          GOTO D02S02Z053
+                        END
+                      ELSE
+                        GOTO D02S02Z051
+                      END
+                    ELSE
+                      GOTO D02S02Z049
+                    END
+                  ELSE
+                    GOTO D02S02Z047
+                  END
+                ELSE
+D02S01Z047:       IF CallT = 5 THEN
+                    GOTO D02S02Z047
+                  ELSE
+D02S01Z049:         IF CallT = 4 THEN
+                      GOTO D02S02Z049
+                    ELSE
+D02S01Z051:           IF CallT = 3 THEN
+                        GOTO D02S02Z051
+                      ELSE
+D02S01Z053:             IF CallT = 2 THEN
+                          GOTO D02S02Z053
+                        ELSE
+D02S01Z055:               IF CallT = 1 THEN
+                            GOTO D02S02Z055
+                          END
+                        END
+                      END
+                    END
+                  END
+                END
+              END
+            END
+D02PROG_ENDE: .
+/*----------------------------------------------------------------------------*/
+
+/* SIGNALPROGRAMM-ABHAENGIGE PARAMETER */ 
+            IF( prog_aktiv = 1 ) AND ( prog_aktiv0vv <> 1 ) THEN 
+              prog_aktiv0vv := 1;
+              ES_InStg3 := 75;
+              LS_InStg3 := 37;
+              ES_InStg2a := 26;
+              LS_InStg2a := 53;
+              ES_InStg1 := 42;
+              LS_InStg1 := 65;
+              ES_InStg2b := 59;
+              LS_InStg2b := 84;
+              ES_InStg4 := 30;
+              LS_InStg4 := 80;
+              TRAM_HOLD := 10;
+              TGR_MAX_K1 := 15;
+              TGR_MAX_T_K1 := 10;
+              TGR_EXT_K2 := 25;
+              TGR_EXT_K3 := 25;
+              TGR_QUEUE_K2 := 35;
+            ELSE IF( prog_aktiv = 2 ) AND ( prog_aktiv0vv <> 2 ) THEN 
+              prog_aktiv0vv := 2;
+              ES_InStg3 := 85;
+              LS_InStg3 := 38;
+              ES_InStg2a := 27;
+              LS_InStg2a := 54;
+              ES_InStg1 := 43;
+              LS_InStg1 := 66;
+              ES_InStg2b := 60;
+              LS_InStg2b := 85;
+              ES_InStg4 := 31;
+              LS_InStg4 := 81;
+              TRAM_HOLD := 11;
+              TGR_MAX_K1 := 15;
+              TGR_MAX_T_K1 := 10;
+              TGR_EXT_K2 := 25;
+              TGR_EXT_K3 := 25;
+              TGR_QUEUE_K2 := 35;
+            END END;
+
+/* AUSDRUECKE */ 
+            Ext_K1K5 := ( Hdw(1) <= MAX_GAP ) OR ( Hdw(5) <= MAX_GAP );
+            FurtherExt_K1 := Ext_K1K5 AND (t_green( K1 ) < TGR_MAX_K1);
+            FurtherExt_T_K1 := Ext_K1K5 AND (t_green( K1 ) < TGR_MAX_T_K1);
+            MinExt_K2 := Ext_K2 AND (t_green( K2 ) < TGR_EXT_K2);
+            MinExtQu_K2 := Ext_K2 AND (t_green( K2 ) < TGR_QUEUE_K2);
+            MinExt_K3 := Ext_K3 AND (t_green( K3 ) < TGR_EXT_K3);
+            Ext_K2 := Hdw(2) <= MAX_GAP_K2;
+            Ext_K3 := ( Hdw(31) <= MAX_GAP ) OR ( Hdw(32) <= MAX_GAP );
+            TWin_InStg1 := ( t >= ES_InStg1 ) AND ( t <= LS_InStg1 );
+            TWin_InStg2a := ( t >= ES_InStg2a ) AND ( t <= LS_InStg2a );
+            TWin_InStg2b := ( t >= ES_InStg2b ) AND ( t <= LS_InStg2b );
+            TWin_InStg3 := ( t >= ES_InStg3 ) OR ( t <= LS_InStg3 );
+            TWin_InStg4 := ( t >= ES_InStg4 ) AND ( t <= LS_InStg4 );
+            Prio_Stg1 := (Queue_K1 AND (t_red(K1) > 60));
+            Prio_Stg2 := NOT Stg2 AND (t_red( F22 ) > MAX_WT_PED);
+            Igr_14 := Zz( F25, S51 );
+            Igr_24 := Zz( F22, S52 );
+            Igr_34 := Zz( K3, S51 );
+            Queue_K1 := Occupancy(18) > T_QUEUE_1_5;
+            Queue_K2 := Occupancy( 28 ) > T_QUEUE_2;
+            Queue_K5 := Occupancy( 5) > T_QUEUE_1_5;
+            WT_EXC_K1K5 := (t_red(1) > MAX_WT_1_5) OR (t_red(5) > MAX_WT_1_5);
+            WT_EXC_K2 := t_red( K2 ) > MAX_WT_2;
+            WT_EXC_F22 := t_red( F22 ) > MAX_WT_PED;
+            WT_EXC_F24 := t_red( F24 ) > MAX_WT_PED;
+
+/* HAUPTPROGRAMM */ 
+
+S00Z001:    IF NOT Init THEN
+S01Z001:      Init := 1;
+S01Z002:      Stg1 := 1
+            END;
+S00Z004:    IF t = LS_InStg3 THEN
+S01Z004:      IF Stg1 = 0 THEN
+S02Z005:        Stg1_ns := 1;
+S01Z007:        Stg1 := 0; Stg2 := 0
+              ELSE
+S01Z005:        Stg1_ns := 0;
+                GOTO S01Z007
+              END
+            END;
+S00Z009:    GOSUB PT_MODULE;
+S00Z010:    IF StgA( 1 ) THEN
+S01Z010:      Stg1 := 1; Stg1_ns := 0;
+S01Z011:      IF RemTime <= Igr_14 THEN
+S03Z011:        IF NOT (FurtherExt_T_K1) THEN
+S05Z012:          Interstage( 1, 4 )
+                END
+              ELSE
+S01Z013:        IF TWin_InStg3 THEN
+S02Z013:          IF RemTime > (PuD(1,3) + Igr_34) THEN
+S03Z013:            IF NOT (FurtherExt_K1) THEN
+S03Z015:              IF NOT WT_EXC_F22 THEN
+S05Z015:                Interstage( 1, 3 )
+                      ELSE
+S03Z017:                IF NOT (FurtherExt_K1) THEN
+S05Z018:                  Interstage( 1, 2 )
+                        END
+                      END
+                    END
+                  ELSE
+S02Z014:            IF Queue_K2 THEN
+                      GOTO S05Z015
+                    ELSE
+S01Z017:              IF TWin_InStg2a OR TWin_InStg2b THEN
+S02Z017:                IF RemTime > (PuD(1,2) + Igr_24) THEN
+                          GOTO S03Z017
+                        END
+                      END
+                    END
+                  END
+                ELSE
+                  GOTO S01Z017
+                END
+              END
+            END;
+S00Z020:    IF StgA( 2 ) THEN
+S01Z020:      Stg2 := 1;
+S01Z021:      IF RemTime <= Igr_24 THEN
+S02Z021:        IF TWin_InStg4 THEN
+S05Z021:          Interstage( 2, 4 )
+                ELSE
+S02Z022:          IF TWin_InStg3 THEN
+S05Z022:            Interstage( 2, 3 )
+                  ELSE
+S02Z023:            IF TWin_InStg1 THEN
+S05Z023:              Interstage( 2, 1 )
+                    END
+                  END
+                END
+              ELSE
+S01Z025:        IF TWin_InStg3 THEN
+S02Z025:          IF RemTime > (PuD(2,3) + Igr_34) THEN
+S05Z025:            Interstage( 2, 3 )
+                  ELSE
+S01Z027:            IF TWin_InStg1 THEN
+S02Z027:              IF RemTime > (PuD(2,1) + Igr_14) THEN
+S05Z027:                Interstage( 2, 1 )
+                      END
+                    END
+                  END
+                ELSE
+                  GOTO S01Z027
+                END
+              END
+            END;
+S00Z030:    IF StgA( 3 ) THEN
+S01Z030:      IF NOT (MinExt_K2) THEN
+S01Z031:        IF NOT (MinExt_K3) THEN
+S01Z032:          IF RemTime <= Igr_34 THEN
+S02Z032:            IF TWin_InStg4 THEN
+S03Z032:              IF Queue_K2 THEN
+S04Z032:                IF NOT (MinExtQu_K2) THEN
+S05Z033:                  Interstage( 3, 4 )
+                        END
+                      ELSE
+                        GOTO S05Z033
+                      END
+                    ELSE
+S01Z034:              IF TWin_InStg1 THEN
+S02Z034:                IF RemTime > (PuD(3,1) + Igr_14) THEN
+S03Z034:                  IF Stg1_ns THEN
+S05Z037:                    Interstage( 3, 1 )
+                          ELSE
+S03Z035:                    IF NOT Ext_K2 AND NOT Ext_K3 THEN
+                              GOTO S05Z037
+                            ELSE
+S03Z036:                      IF Prio_Stg1 AND NOT Queue_K2 THEN
+                                GOTO S05Z037
+                              ELSE
+S03Z037:                        IF t >= LS_InStg1 THEN
+                                  GOTO S05Z037
+                                END
+                              END
+                            END
+                          END
+                        ELSE
+S01Z039:                  IF TWin_InStg2a THEN
+S02Z039:                    IF RemTime > (PuD(3,2) + Igr_24) THEN
+S03Z039:                      IF WT_EXC_F22 THEN
+S04Z039:                        IF NOT Ext_K2 THEN
+S05Z040:                          Interstage( 3, 2 )
+                                ELSE
+S04Z040:                          IF t >= LS_InStg2a THEN
+                                    GOTO S05Z040
+                                  END
+                                END
+                              ELSE
+S01Z042:                        IF TWin_InStg2b THEN
+S02Z042:                          IF RemTime > (PuD(3,2) + Igr_24) THEN
+S03Z042:                            IF WT_EXC_F22 THEN
+S05Z042:                              Interstage( 3, 2 )
+                                    END
+                                  END
+                                END
+                              END
+                            ELSE
+                              GOTO S01Z042
+                            END
+                          ELSE
+                            GOTO S01Z042
+                          END
+                        END
+                      ELSE
+                        GOTO S01Z039
+                      END
+                    END
+                  ELSE
+                    GOTO S01Z034
+                  END
+                END
+              END
+            END;
+S00Z044:    IF StgA( 4 ) THEN
+S01Z044:      IF Cancel THEN
+S02Z044:        Cancel := 0;
+S02Z045:        IF NOT (RemTime <= TRAM_HOLD) THEN
+S02Z046:          IF Prio_Stg1 THEN
+S05Z046:            Interstage( 4, 1 )
+                  ELSE
+S02Z047:            IF TWin_InStg3 THEN
+S05Z047:              Interstage( 4, 3 )
+                    ELSE
+S02Z048:              IF TWin_InStg2a THEN
+S03Z048:                IF WT_EXC_F22 THEN
+S05Z048:                  Interstage( 4, 2 )
+                        ELSE
+S05Z049:                  Interstage( 4, 3 )
+                        END
+                      ELSE
+S02Z050:                IF TWin_InStg1 THEN
+S05Z051:                  Interstage( 4, 1 )
+                        ELSE
+S02Z051:                  IF TWin_InStg2b THEN
+S03Z051:                    IF Prio_Stg1 THEN
+S04Z051:                      IF Stg2 THEN
+                                GOTO S05Z051
+                              ELSE
+S05Z052:                        Interstage( 4, 2 )
+                              END
+                            ELSE
+                              GOTO S05Z052
+                            END
+                          ELSE
+S05Z053:                    Interstage( 4, 3 )
+                          END
+                        END
+                      END
+                    END
+                  END
+                END
+              END
+            END;
+S00Z055:    GOSUB LDP_MODULE
+PROG_ENDE:    .
+/*----------------------------------------------------------------------------*/

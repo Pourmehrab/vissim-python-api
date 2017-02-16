@@ -1,0 +1,41 @@
+$SIGNAL_GROUPS
+ - optional comment lines
+$
+   P1  1
+   P202  202
+   P3  3
+   P204  204
+   P5  5
+   P206  206
+   P7  7
+   P208  208
+   P102  102
+   P103  103
+   P104  104
+   P106  106
+   P108  108
+
+$STAGES
+ - optional comment lines
+$
+Phase_1      P1
+Phase_202    P202
+Phase_3      P3
+Phase_204    P204
+Phase_5      P5 
+Phase_206    P206
+Phase_7      P7
+Phase_208    P208
+Phase_102    P102
+Phase_103    P103
+Phase_104    P104
+Phase_106    P106
+Phase_108    P108
+
+$STARTING_STAGE
+ - optional comment lines
+$
+Phase_202
+Phase_206
+
+$END

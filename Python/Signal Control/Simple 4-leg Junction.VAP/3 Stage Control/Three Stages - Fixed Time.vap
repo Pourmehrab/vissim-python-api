@@ -1,0 +1,44 @@
+PROGRAM ThreeStagesFixed; /* D:\VISSIM\Data\VAP_3stages\ThreeStagesFixed.vv */
+
+CONST 
+            MAX_STG1 = 20,
+            MAX_STG2 = 5,
+            MAX_STG3 = 10;
+
+/* ARRAYS */ 
+
+/* UNTERPROGRAMME */ 
+
+/* SIGNALPROGRAMM-ABHAENGIGE PARAMETER */ 
+            
+/* AUSDRUECKE */ 
+
+/* HAUPTPROGRAMM */ 
+
+S00Z001:    IF Any_interstage_active THEN
+              GOTO PROG_ENDE
+            ELSE
+S00Z002:      IF Stage_active( 1 ) THEN
+S01Z002:        IF StgT( 1 ) < MAX_STG1 THEN
+                  GOTO PROG_ENDE
+                ELSE
+S02Z003:          Interstage( 1 , 2 );
+                  GOTO PROG_ENDE
+                END
+              END
+            END;
+S00Z004:    IF Stage_active( 2 ) THEN
+S01Z004:      IF StgT( 2 ) < MAX_STG2 THEN
+                GOTO PROG_ENDE
+              ELSE
+S02Z005:        Interstage( 2 , 3 );
+                GOTO PROG_ENDE
+              END
+            END;
+S00Z006:    IF Stage_active( 3 ) THEN
+S01Z006:      IF NOT (StgT( 3 ) < MAX_STG3) THEN
+S02Z007:        Interstage( 3 , 1 )
+              END
+            END
+PROG_ENDE:    .
+/*----------------------------------------------------------------------------*/

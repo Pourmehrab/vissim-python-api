@@ -1,0 +1,38 @@
+$SIGNALGRUPPEN
+
+VAP    VISSIM
+$
+K1     1
+F21    21
+
+$PHASEN
+Phase      SG
+$
+Phase_1    K1
+rot        F21
+Phase_2    F21
+rot        K1
+
+$STARTPHASE
+$
+Phase_1
+
+$PÜ1
+Übergangsdauer [s]: 5
+Von Phase         : 1
+Nach Phase        : 2
+
+$    Rotende  Grünende
+K1   -127       0
+F21     5     127
+
+$PÜ2
+Übergangsdauer [s]: 6
+Von Phase         : 2
+Nach Phase        : 1
+
+$    Rotende  Grünende
+K1      5     127
+F21  -127       0
+
+$ENDE

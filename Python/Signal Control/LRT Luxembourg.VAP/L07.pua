@@ -1,0 +1,118 @@
+$SIGNAL_GROUPS
+CROSSIG                  VISSIM
+K1                       K1
+K2                       K2
+K3                       K3
+F21                      F21
+F23                      F23
+F25                      F25
+F27                      F27
+S51                      S51
+S52                      S52
+$
+K1                       1
+K2                       2
+K3                       3
+F21                      21
+F23                      23
+F25                      25
+F27                      27
+S51                      51
+S52                      52
+
+$IGM
+$
+                            K1             K2             K3            F21            F23            F25            F27            S51            S52
+             K1           -127           -127           -127              4           -127           -127           -127           -127           -127
+             K2           -127           -127           -127           -127              4           -127           -127           -127           -127
+             K3           -127           -127           -127           -127           -127              4           -127           -127           -127
+            F21              4           -127           -127           -127           -127           -127           -127           -127           -127
+            F23           -127              4           -127           -127           -127           -127           -127           -127           -127
+            F25           -127           -127              5           -127           -127           -127           -127           -127           -127
+            F27           -127           -127           -127           -127           -127           -127           -127              5              5
+            S51           -127           -127           -127           -127           -127           -127              5           -127           -127
+            S52           -127           -127           -127           -127           -127           -127              5           -127           -127
+
+$STAGES
+CROSSIG                  VISSIM
+1                        Stage_1
+2                        Stage_2
+11                       Stage_11
+12                       Stage_12
+21                       Stage_21
+22                       Stage_22
+$
+Stage_1                  K2	K3	
+Stage_2                  F23	F25	
+Stage_11                  K1	
+Stage_12                  F21	
+Stage_21                  F27	
+Stage_22                  S51	S52	
+
+$STARTING_STAGE
+$
+Stage_1
+Stage_11
+Stage_21
+
+$INTERSTAGE1
+Interstage_number      : 2
+Length [s]             : 15
+From Stage             : 2
+To Stage               : 1
+$
+K2                          9            127
+K3                         10            127
+F23                      -127              0
+F25                      -127              5
+
+$INTERSTAGE2
+Interstage_number      : 5
+Length [s]             : 10
+From Stage             : 21
+To Stage               : 22
+$
+F27                      -127              0
+S51                         5            127
+S52                         5            127
+
+$INTERSTAGE3
+Interstage_number      : 4
+Length [s]             : 9
+From Stage             : 12
+To Stage               : 11
+$
+K1                          4            127
+F21                      -127              0
+
+$INTERSTAGE4
+Interstage_number      : 1
+Length [s]             : 9
+From Stage             : 1
+To Stage               : 2
+$
+K2                       -127              0
+K3                       -127              0
+F23                         4            127
+F25                         4            127
+
+$INTERSTAGE5
+Interstage_number      : 3
+Length [s]             : 9
+From Stage             : 11
+To Stage               : 12
+$
+K1                       -127              0
+F21                         4            127
+
+$INTERSTAGE6
+Interstage_number      : 6
+Length [s]             : 10
+From Stage             : 22
+To Stage               : 21
+$
+F27                         5            127
+S51                      -127              0
+S52                      -127              0
+
+$END

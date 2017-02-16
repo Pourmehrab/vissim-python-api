@@ -1,0 +1,176 @@
+PROGRAM L06_M0; /* D:\Data\VISSIM-Install\600\Examples\Examples Training\Signal Control\LRT Luxembourg.VAP\L06_M0.vv */
+
+VAP_FREQUENCY 1;
+
+CONST 
+            MAX_GAP = 4,
+            T_QUEUE = 7,
+            OFFSET_K11 = 9;
+
+/* ARRAYS */ 
+
+/* UNTERPROGRAMME */ 
+
+SUBROUTINE TW_MODULE;  /* L06_M1.vv */
+D01S00Z001: IF ES1 > LE1 THEN
+D01S01Z001:   IF T >= ES1 THEN
+D01S03Z002:     TWin1 := 1
+              ELSE
+D01S01Z002:     IF T < LE1 THEN
+                  GOTO D01S03Z002
+                ELSE
+D01S03Z003:       TWin1 := 0
+                END
+              END
+            ELSE
+D01S00Z002:   IF T >= ES1 THEN
+                GOTO D01S01Z002
+              ELSE
+                GOTO D01S03Z003
+              END
+            END;
+D01S00Z005: IF ES3 > LE3 THEN
+D01S01Z005:   IF T >= ES3 THEN
+D01S03Z006:     TWin3 := 1
+              ELSE
+D01S01Z006:     IF T < LE3 THEN
+                  GOTO D01S03Z006
+                ELSE
+D01S03Z007:       TWin3 := 0
+                END
+              END
+            ELSE
+D01S00Z006:   IF T >= ES3 THEN
+                GOTO D01S01Z006
+              ELSE
+                GOTO D01S03Z007
+              END
+            END;
+D01S00Z009: IF EE1 > LE1 THEN
+D01S01Z009:   IF T >= EE1 THEN
+D01S03Z010:     Ext1 := 1
+              ELSE
+D01S01Z010:     IF T < LE1 THEN
+                  GOTO D01S03Z010
+                ELSE
+D01S03Z011:       Ext1 := 0
+                END
+              END
+            ELSE
+D01S00Z010:   IF T >= EE1 THEN
+                GOTO D01S01Z010
+              ELSE
+                GOTO D01S03Z011
+              END
+            END;
+D01S00Z013: IF EE3 > LE3 THEN
+D01S01Z013:   IF T >= EE3 THEN
+D01S03Z014:     Ext3 := 1
+              ELSE
+D01S01Z014:     IF T < LE3 THEN
+                  GOTO D01S03Z014
+                ELSE
+D01S03Z015:       Ext3 := 0
+                END
+              END
+            ELSE
+D01S00Z014:   IF T >= EE3 THEN
+                GOTO D01S01Z014
+              ELSE
+                GOTO D01S03Z015
+              END
+            END
+D01PROG_ENDE: .
+/*----------------------------------------------------------------------------*/
+
+/* SIGNALPROGRAMM-ABHAENGIGE PARAMETER */ 
+            IF( prog_aktiv = 1 ) AND ( prog_aktiv0vv <> 1 ) THEN 
+              prog_aktiv0vv := 1;
+              StgD_2 := 5;
+              ES1 := 2;
+              EE1 := 40;
+              LE1 := 50;
+              ES3 := 71;
+              EE3 := 80;
+              LE3 := 5;
+            ELSE IF( prog_aktiv = 2 ) AND ( prog_aktiv0vv <> 2 ) THEN 
+              prog_aktiv0vv := 2;
+              StgD_2 := 7;
+              ES1 := 2;
+              EE1 := 42;
+              LE1 := 52;
+              ES3 := 72;
+              EE3 := 80;
+              LE3 := 5;
+            END END;
+
+/* AUSDRUECKE */ 
+            Ext_K4 := (Hdw( 41 ) < MAX_GAP) OR (Hdw( 42 ) < MAX_GAP);
+            Ext_K6 := Hdw( 6 ) < MAX_GAP;
+            Queue_K2_1 := OccT( 921 ) > T_QUEUE;
+            Queue_K2_2 := OccT( 922 ) > T_QUEUE;
+
+/* HAUPTPROGRAMM */ 
+
+S00Z001:    GOSUB TW_MODULE;
+S00Z002:    IF StgA( 1 ) THEN
+S01Z002:      IF NOT TWin1 THEN
+S03Z003:        Interstage( 1, 2 );
+S03Z004:        Start( Offs_K11 )
+              ELSE
+S01Z003:        IF Ext1 THEN
+S02Z003:          IF NOT Ext_K4 THEN
+                    GOTO S03Z003
+                  END
+                END
+              END
+            END;
+S00Z006:    IF StgA( 2 ) THEN
+S01Z006:      IF StgT( 2 ) >= StgD_2 THEN
+S03Z006:        Interstage( 2, 3 )
+              END
+            END;
+S00Z008:    IF StgA( 3 ) THEN
+S01Z008:      IF NOT TWin3 THEN
+S03Z009:        Interstage( 3, 1 )
+              ELSE
+S01Z009:        IF Ext3 THEN
+S02Z009:          IF NOT Ext_K6 THEN
+                    GOTO S03Z009
+                  END
+                END
+              END
+            END;
+S00Z012:    IF StgA( 11 ) THEN
+S01Z012:      IF Offs_K11 = 2 THEN
+S02Z012:        tgmin_F21 := 5;
+S03Z013:        Interstage( 11, 12 )
+              ELSE
+S01Z013:        IF Queue_K2_2 THEN
+S02Z013:          tgmin_F21 := 5;
+                  GOTO S03Z013
+                END
+              END
+            END;
+S00Z015:    IF StgA( 12 ) THEN
+S01Z015:      IF Tg( F21 ) >= tgmin_F21 THEN
+S02Z015:        IF NOT Queue_K2_2 THEN
+S03Z016:          Interstage( 12, 11 )
+                ELSE
+S02Z016:          IF NOT Queue_K2_1 THEN
+                    GOTO S03Z016
+                  END
+                END
+              END
+            END;
+S00Z019:    IF StgA( 21 ) THEN
+S01Z019:      IF Offs_K11 = OFFSET_K11 THEN
+S02Z019:        Stop( Offs_K11 ); Reset( Offs_K11 );
+S03Z019:        Interstage( 21, 22 )
+              END
+            END;
+S00Z021:    IF StgA( 22 ) THEN
+S03Z021:      Interstage( 22, 21 )
+            END
+PROG_ENDE:    .
+/*----------------------------------------------------------------------------*/

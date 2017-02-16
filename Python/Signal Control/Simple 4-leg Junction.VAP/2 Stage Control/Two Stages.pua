@@ -1,0 +1,60 @@
+$SIGNALGRUPPEN
+VAP                  VISSIM
+$
+K1                       1
+K2                       2
+K3                       3
+K4                       4
+K5                       5
+K6                       6
+FG21                     21
+FG22                     22
+FG23                     23
+FG24                     24
+
+$PHASEN
+$
+Phase_1                  K1 K2 K4 K5
+  rot                    K3 K6 FG21 FG23
+Phase_2                  K3 K6
+  rot                    K1 K2 K4 K5  FG22 FG24
+
+$STARTPHASE
+$
+Phase_1
+
+
+$PÜ
+Übergangsdauer [s]     : 10
+Von Phase              : 1
+Nach Phase             : 2
+$
+K1                       -127              0
+K2                       -127              0
+K3                          4            127
+K4                       -127              0
+K5                       -127              0
+K6                          3            127
+FG21                        4              9
+FG22                     -127              0
+FG23                        4             10
+FG24                     -127              0
+
+
+$PÜ
+Übergangsdauer [s]     : 12
+Von Phase              : 2
+Nach Phase             : 1
+$
+K1                          7            127
+K2                          7            127
+K3                       -127              0
+K4                          7            127
+K5                          7            127
+K6                       -127              0
+FG21                     -127              0
+FG22                        7             12
+FG23                     -127              0
+FG24                        7             12
+
+$ENDE

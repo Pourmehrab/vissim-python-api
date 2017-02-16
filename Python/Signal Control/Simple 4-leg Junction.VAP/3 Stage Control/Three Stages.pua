@@ -1,0 +1,134 @@
+$SIGNALGRUPPEN
+CROSSIG                  VISSIM
+K1                       K1
+K2                       K2
+K3                       K3
+K4                       K4
+K5                       K5
+K6                       K6
+FG21                     FG21
+FG22                     FG22
+FG23                     FG23
+FG24                     FG24
+$
+K1                       1
+K2                       2
+K3                       3
+K4                       4
+K5                       5
+K6                       6
+FG21                     7
+FG22                     8
+FG23                     9
+FG24                     10
+
+$ZZM
+$
+                            K1             K2             K3             K4             K5             K6           FG21           FG22           FG23           FG24
+             K1           -127           -127              4           -127              4              8              4           -127              7           -127
+             K2           -127           -127              4              5           -127              4              4              7           -127           -127
+             K3              6              4           -127              4              6           -127           -127              4           -127              8
+             K4           -127              5              7           -127           -127              5              7           -127              4           -127
+             K5              6           -127              4           -127           -127              5           -127           -127              4              8
+             K6              4              6           -127              6              4           -127           -127              8           -127              4
+           FG21             12             12           -127             10           -127           -127           -127           -127           -127           -127
+           FG22           -127              6              8           -127           -127              5           -127           -127           -127           -127
+           FG23              8           -127           -127             11             11           -127           -127           -127           -127           -127
+           FG24           -127           -127              8           -127              8             11           -127           -127           -127           -127
+
+$PHASEN
+CROSSIG                  VISSIM
+1                        Phase_1
+2                        Phase_2
+3                        Phase_3
+$
+Phase_1                  K1	K4	
+  rot                    K2	K3	K5	K6	FG21	FG22	FG23	FG24	
+Phase_2                  K2	K5	
+  rot                    K1	K3	K4	K6	FG21	FG22	FG23	FG24	
+Phase_3                  K3	K6	
+  rot                    K1	K2	K4	K5	FG21	FG22	FG23	FG24	
+
+$STARTPHASE
+$
+Phase_1
+
+$PÜ
+PÜ-Name                : --- PÜ von 1 nach 3 (14 s) ---
+PÜ-Kommentar           : 
+PÜ-Kommentar           : 
+PÜ_Nummer              : 2
+Übergangsdauer [s]     : 18
+Von Phase              : 1
+Nach Phase             : 3
+$
+K1                       -127              0
+K3                          7            127
+K4                       -127              1
+K6                          7            127
+FG21                        8             14
+FG23                        8             14
+
+$PÜ
+PÜ-Name                : --- PÜ von 3 nach 1 (14 s) ---
+PÜ-Kommentar           : 
+PÜ-Kommentar           : 
+PÜ_Nummer              : 5
+Übergangsdauer [s]     : 18
+Von Phase              : 3
+Nach Phase             : 1
+$
+K1                          7            127
+K3                       -127              0
+K4                          7            127
+K6                       -127              0
+FG22                        8             13
+FG24                        8             14
+
+$PÜ
+PÜ-Name                : --- PÜ von 1 nach 2 (10 s) ---
+PÜ-Kommentar           : 
+PÜ-Kommentar           : 
+PÜ_Nummer              : 1
+Übergangsdauer [s]     : 10
+Von Phase              : 1
+Nach Phase             : 2
+$
+K1                       -127              0
+K2                          4            127
+K4                       -127              0
+K5                          3            127
+
+$PÜ
+PÜ-Name                : --- PÜ von 2 nach 3 (11 s) ---
+PÜ-Kommentar           : 
+PÜ-Kommentar           : 
+PÜ_Nummer              : 4
+Übergangsdauer [s]     : 15
+Von Phase              : 2
+Nach Phase             : 3
+$
+K2                       -127              1
+K3                          4            127
+K5                       -127              0
+K6                          4            127
+FG21                        5             11
+FG23                        5             11
+
+$PÜ
+PÜ-Name                : --- PÜ von 2 nach 1 (14 s) ---
+PÜ-Kommentar           : 
+PÜ-Kommentar           : 
+PÜ_Nummer              : 3
+Übergangsdauer [s]     : 18
+Von Phase              : 2
+Nach Phase             : 1
+$
+K1                          7            127
+K2                       -127              0
+K4                          6            127
+K5                       -127              0
+FG22                        7             12
+FG24                        8             14
+
+$ENDE

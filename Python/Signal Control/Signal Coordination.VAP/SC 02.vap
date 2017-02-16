@@ -1,0 +1,34 @@
+PROGRAM SC_02; /* D:\Data\VISSIM\SignalControl\SC-Coordination\SC_02.vv */
+
+VAP_FREQUENCY 1;
+
+
+/* ARRAYS */ 
+
+/* SUBROUTINES */ 
+
+/* PARAMETERS DEPENDENT ON SCJ-PROGRAM */ 
+            
+/* EXPRESSIONS */ 
+            minGreenStg1 := T_green( A ) >= T_green_min( A );
+            minGreenStg2 := T_green( B ) >= T_green_min( B );
+
+/* MAIN PROGRAM */ 
+
+S00Z001:    calledStage := Marker_get( 11 );
+S00Z002:    IF Stage_active( 1 ) THEN
+S01Z002:      IF minGreenStg1 THEN
+S02Z002:        IF calledStage = 2 THEN
+S03Z002:          Interstage( 1 , 2 )
+                END
+              END
+            END;
+S00Z004:    IF Stage_active( 2 ) THEN
+S01Z004:      IF minGreenStg2 THEN
+S02Z004:        IF calledStage = 1 THEN
+S03Z004:          Interstage( 2 , 1 )
+                END
+              END
+            END
+PROG_ENDE:    .
+/*----------------------------------------------------------------------------*/

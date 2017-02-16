@@ -1,0 +1,12 @@
+PROGRAM TramInMittellage;
+VAP_Frequency 10;
+
+S00z001: IF ( Occupancy( 1 ) > 0 ) THEN
+S01z001:    Schalte_sg_direkt( 1 , rot)
+         END;
+
+S00z003: IF ( Occupancy( 1 ) = 0 ) THEN
+S01z003:   Schalte_sg_direkt( 1 , aus)
+         END
+
+PROG_END: .

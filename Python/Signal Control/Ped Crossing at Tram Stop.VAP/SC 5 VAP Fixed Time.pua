@@ -1,0 +1,33 @@
+$SIGNAL_GROUPS
+$
+SG_ped    1
+SG_veh    2
+
+$STAGES
+$
+Stage_1          SG_ped
+red		 SG_veh
+Stage_2          SG_veh
+red              SG_ped
+
+$STARTING_STAGE
+$
+Stage_2
+
+$INTERSTAGE1
+Length [s]             : 3
+From Stage             : 1
+To Stage               : 2
+$
+SG_ped  -127 0
+SG_veh   2  127
+
+$INTERSTAGE2
+Length [s]             : 5
+From Stage             : 2
+To Stage               : 1
+$
+SG_ped  5 127
+SG_veh  -127 0
+
+$END

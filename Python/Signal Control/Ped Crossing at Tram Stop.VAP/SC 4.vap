@@ -1,0 +1,22 @@
+PROGRAM LSA4;
+VAP_Frequency 10;
+
+/* SUBROUTINES */ 
+
+/* PARAMETERS DEPENDENT ON SCJ-PROGRAM */ 
+            
+/* EXPRESSIONS */ 
+            IsGreen := (Marker_Get( 5 ) = 1 );
+            TramApproaching := (Occupancy( 3 ) > 0 );
+
+/* MAIN PROGRAM */ 
+
+S00Z001:    IF (IsGreen OR TramApproaching) THEN
+S01Z001:      Schalte_sg_direkt( 1 , green)
+            END;
+
+S00Z002:    IF ((NOT IsGreen) AND (NOT TramApproaching)) THEN
+S01Z002:      Schalte_sg_direkt( 1 , red)
+            END
+
+PROG_ENDE:  .

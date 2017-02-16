@@ -1,0 +1,99 @@
+VISVAP VERSION 2.16-12
+
+FREQUENZ 1
+
+Z0|S0|T|Main SC 7|00100011|0#
+Z1|S0|B|!Init|10110011|0#
+Z2|S0|L||10100011|0#
+Z3|S0|L||10110010|0#
+Z4|S0|U|PT_Module|10100011|0#
+Z5|S0|B|StgA( 1 )|10110011|0#
+Z6|S0|L||10100011|0#
+Z7|S0|L||10100011|0#
+Z8|S0|L||10110010|0#
+Z9|S0|B|Interstage_active( 1, 2 )|10110011|0#
+Z10|S0|L||10110010|0#
+Z11|S0|B|StgA( 2 )|10110011|0#
+Z12|S0|L||10110010|0#
+Z13|S0|L||10100011|0#
+Z14|S0|B|StgA( 11 )|10110011|0#
+Z15|S0|L||10100011|0#
+Z16|S0|L||10100011|0#
+Z17|S0|L||10110010|0#
+Z18|S0|B|Interstage_active( 11, 12 )|10110011|0#
+Z19|S0|L||10110010|0#
+Z20|S0|B|StgA( 12 )|10110011|0#
+Z21|S0|L||10110010|0#
+Z22|S0|L||10100011|0#
+Z23|S0|B|StgA( 21 )|10110011|0#
+Z24|S0|L||10110010|0#
+Z25|S0|B|StgA( 22 )|10110011|0#
+Z26|S0|L||10110010|0#
+Z27|S0|T|End|10000011|0#
+Z1|S1|A|Init := 1|01100011|0#
+Z2|S1|A|RemTime := 99|10100011|0#
+Z3|S1|L||11000100|0#
+Z5|S1|B|Coord_Window|01110011|0#
+Z6|S1|B|Tr( F25 ) >= MAXWT_PED|10110011|0#
+Z7|S1|B|!Ext_K3|10110011|0#
+Z8|S1|L||11010100|0#
+Z9|S1|A|Dem_K3 := 0|01100011|0#
+Z10|S1|L||11000100|0#
+Z11|S1|B|Dem_K3|01110011|0#
+Z12|S1|L||11010100|0#
+Z14|S1|B|Coord_window|01110011|0#
+Z15|S1|B|Tr( F21 ) >= MAXWT_PED|10110011|0#
+Z16|S1|B|!Ext_K1|10110011|0#
+Z17|S1|L||11010100|0#
+Z18|S1|A|Dem_K1 := 0|01100011|0#
+Z19|S1|L||11000100|0#
+Z20|S1|B|Dem_K1|01110011|0#
+Z21|S1|L||11010100|0#
+Z23|S1|B|RemTime <= Igr_12|01110011|0#
+Z24|S1|L||11010100|0#
+Z25|S1|B|RemTime > TRAM_HOLD|01110011|0#
+Z26|S1|L||11010110|0#
+Z5|S2|B|Ext_K3|01110011|0#
+Z6|S2|L||11100011|0#
+Z7|S2|A|Interstage( 1, 2 )|11100011|0#
+Z8|S2|L||11010110|0#
+Z11|S2|A|Interstage( 2, 1 )|01100011|0#
+Z12|S2|L||11000100|0#
+Z14|S2|B|Ext_K1|01110011|0#
+Z15|S2|L||11100011|0#
+Z16|S2|A|Interstage( 11, 12 )|11100011|0#
+Z17|S2|L||11010110|0#
+Z20|S2|A|Interstage( 12, 11 )|01100011|0#
+Z21|S2|L||11000100|0#
+Z23|S2|A|Interstage( 21, 22 )|01100011|0#
+Z24|S2|L||11000100|0#
+Z25|S2|A|Interstage( 22, 21 )|01100011|0#
+Z26|S2|L||11000100|0#
+Z5|S3|L||01100010|0#
+Z6|S3|L||10100011|0#
+Z7|S3|L||10100010|0#
+Z8|S3|L||11000100|0#
+Z14|S3|L||01100010|0#
+Z15|S3|L||10100011|0#
+Z16|S3|L||10100010|0#
+Z17|S3|L||11000100|0#
+
+KONSTANTEN
+TRAM_HOLD|20|||||||||max. time to hold tram stage#
+MAX_GAP|5|||||||||max. gap for extension detection#
+MAXWT_PED|70|||||||||max. waiting time for peds#
+COORD_BEG|1|||||||||begin of coordination window#
+COORD_END|60|||||||||end of coordination window#
+IGR_12|5|||||||||Intergreen Stage 1 - Stage 2#
+
+ARRAYS
+
+AUSDRUECKE
+Dem_K1|Call( 11 ) v Dem_K1 v ( OccT( 13 ) > 30 )|Demand K1#
+Ext_K1|( Hdw( 11 ) < MAX_GAP ) v ( Hdw( 12 ) < MAX_GAP ) v ( OccT( 12 ) > 0 )|Demand for green time extension K1#
+Dem_K3|Call( 31 ) v Dem_K3 v ( OccT( 34 ) > 35 )|Demand K3#
+Ext_K3|( Hdw( 31 ) < MAX_GAP ) v ( Hdw( 32 ) < MAX_GAP ) v ( Hdw( 33 ) < MAX_GAP ) v ( OccT( 33 ) > 0 )|Demand for green time extension K3#
+Coord_Window|( t >= COORD_BEG ) AND ( t <= COORD_END )|Coodination window with other SC#
+
+UPROG
+PT_MODULE|L07_M1.vv|processing of tram calls#

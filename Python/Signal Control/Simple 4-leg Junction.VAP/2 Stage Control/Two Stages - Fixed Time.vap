@@ -1,0 +1,33 @@
+PROGRAM Two_Stages___Fixed_Time; /* D:\Vision Data\VISSIM.Install\800\Examples\Examples Training\Signal Control\Simple 4-leg Junction.VAP\2 Stage Control\Two Stages - Fixed Time.vap */
+
+VAP_FREQUENCY 1;
+
+CONST 
+            MAX_STG1 = 61,
+            MAX_STG2 = 7;
+
+/* ARRAYS */ 
+
+/* SUBROUTINES */ 
+
+/* PARAMETERS DEPENDENT ON SCJ-PROGRAM */ 
+            
+/* EXPRESSIONS */ 
+
+/* MAIN PROGRAM */ 
+
+S00Z001:    IF NOT (Any_interstage_active) THEN
+S00Z002:      IF Stage_active( 1 ) THEN
+S01Z002:        IF NOT (StgT( 1 ) < MAX_STG1) THEN
+S02Z003:          Interstage( 1 , 2 )
+                END
+              ELSE
+S00Z004:        IF Stage_active( 2 ) THEN
+S01Z004:          IF NOT (StgT( 2 ) < MAX_STG2) THEN
+S02Z005:            Interstage( 2 , 1 )
+                  END
+                END
+              END
+            END
+PROG_ENDE:    .
+/*----------------------------------------------------------------------------*/
