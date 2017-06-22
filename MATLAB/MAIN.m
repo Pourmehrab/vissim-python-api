@@ -1,12 +1,24 @@
 % BY:    MAHMOUD POURMEHRAB
-% EMAIL: POURMEHRAB@GMAIL.COM
+% EMAIL: MPOURMEHRAB@UFL.EDU
 
 clc;
 clear;
 close('all');
 fclose('all');
-delete('*.bin');
-delete('*.png');
+% delete('*.bin');
+% delete('*.png');
+
+%% Path management
+p = pwd;
+f = filesep;
+
+addpath(genpath([p f 'trajectory-optimizer']),...
+    genpath([p f 'traffic-sim']));
+
+%% Run Modes
+plot_traj = 0;
+t_plot_traj = 0; % sec
+profile_code = 0;
 
 %% LOAD DATA FILE
 sc                          =           581;
@@ -14,12 +26,17 @@ sc                          =           581;
 filename         =       ['scenario',num2str(sc),'_input.mat'];
 load (filename,'vehicles','phasesLib','simParameters','intersectionConfig','FullListOfVeh','simEndTime','commRange');
 
+% Create the bin and log dirs if they do not exist
+if ~exist('BIN', 'dir')
+    mkdir('BIN')
+end
+
 % TRAVEL TIME VALUES STORED
-TTFile  =           fopen(['scenario',num2str(sc),'_TT.bin'],'w');
+TTFile  =           fopen(['BIN' filesep 'scenario',num2str(sc),'_TT.bin'],'w');
 % ARRIVAL VALUES STORED
-ARFile  =           fopen(['scenario',num2str(sc),'_AR.bin'],'w');
+ARFile  =           fopen(['BIN' filesep 'scenario',num2str(sc),'_AR.bin'],'w');
 % SIGNAL VALUES STORED
-SCFile  =           fopen(['scenario',num2str(sc),'_SC.bin'],'w');
+SCFile  =           fopen(['BIN' filesep 'scenario',num2str(sc),'_SC.bin'],'w');
 
 
 %% IMPORT/DEFINE VARIABLES REQUIRED TO RUN THE SIMULATION
@@ -59,9 +76,12 @@ currFullTime              = simParameters.refFullTime;
 
 %% MAIN CONTROL LOOP
 timeIncrement = 0.1;
-simParameters.fig   =   figure('Name','Trajectories per Lanes','NumberTitle','off','units','normalized','outerposition',[0 0 1 1],'Color','w');
-
-% profile on
+if plot_traj
+    simParameters.fig   =   figure('Name','Trajectories per Lanes','NumberTitle','off','units','normalized','outerposition',[0 0 1 1],'Color','w');
+end
+if profile_code
+    profile on
+end
 while  true
     
     ProcessIncommingMsg;
@@ -94,7 +114,7 @@ while  true
                         %  simParameters.globalTime >= 24 || (length(signal.nextPhasesG)>1 && signal.nextPhasesG(end)>4.6)
                         [vehicles(lane), signal]  =  TrajectoryEstOpt( vehicles(lane)...
                             ,lane,signal,intersectionConfig,phasesLib,simParameters,SCFile ); % FOR FDOT THIS FUNCTION ALSO CAN MODIFY SIGNALIZATION
-                        if simParameters.globalTime >= 0
+                        if plot_traj && simParameters.globalTime >= t_plot_traj
                             TrajDiag(vehicles ,signal, phasesLib ,commRange ,simParameters.globalTime,simParameters.fig,intersectionConfig);
                             remainingVeh
                         end
@@ -104,20 +124,6 @@ while  true
             end
         end
     end
-    
-    % PREDICTED VEHICLES ARE NOT NEEDED ANYMORE (NO PREDICTED VEHICLE FOR FDOT)
-    %         for lane  =  1:intersectionConfig.NoOfLanes
-    %             if vehicles(lane).predicted(vehicles(lane).vehIndx(1)) == 1
-    %                 vehicles(lane).vehIndx(1) = 0;
-    %                 vehicles(lane).vehIndx(2) = 0;
-    %             else
-    %                 while vehicles(lane).predicted(vehicles(lane).vehIndx(2)) == 1
-    %                     vehicles(lane).vehIndx(2) = 1 + mod(vehicles(lane).vehIndx(2)-2,intersectionConfig.maxNoVehsPerLane);
-    %                 end
-    %             end
-    %         end
-    
-    
     
     t = currFullTime(3) + timeIncrement;
     currFullTime(3) = t;
@@ -160,7 +166,7 @@ while  true
         fwrite(SCFile,[simParameters.globalTime signal.nextPhasesSeq(end) signal.nextPhasesG(end) signal.nextPhasesY(end) signal.nextPhasesAR(end)]*1000,'int');
     end
     
-
+    
     %     MONITOR AND UPDATE
     for lane  =  1:intersectionConfig.NoOfLanes
         if vehicles(lane).vehIndx(1) ~= 0
@@ -196,14 +202,17 @@ while  true
     if sum(existingVeh) == 0 && sum(remainingVeh) == 0 % TERMINATION CONDITION : SYSTEM IS EMPTY
         break;
     end
-
-         pause(timeIncrement)
+    
+    pause(timeIncrement)
 end
 fclose('all');
-% profsave
-%
+
+if profile_code
+    profsave
+    profile viewer
+end
+
 save(['scenario',num2str(sc),'_output.mat']);
 %
-% profile viewer
 
 
