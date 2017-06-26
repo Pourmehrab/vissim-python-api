@@ -8,3 +8,10 @@ NB-4lane 1/2*/2
 WB-5lane 1/2/2
 
 * shared
+
+
+signal controller
+	signal program
+		signal group ~ signal head
+		
+set simulation resolution to 1 sec or signal switches does'nt work properly.

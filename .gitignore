@@ -101,3 +101,4 @@ VISSIG_Controller.dll.err
 # MATLAB
 *.mat
 *.bin
+*.asv
