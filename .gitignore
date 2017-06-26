@@ -90,3 +90,14 @@ ENV/
 
 # Pycharm
 .idea/
+
+# VISSIM
+MATLAB/VISSIM-model/13thAND16th.results/*
+MATLAB/VISSIM-mode/
+.txt
+.err
+VISSIG_Controller.dll.err
+13thAND16th.err
+# MATLAB
+*.mat
+*.bin

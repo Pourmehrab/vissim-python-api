@@ -1,0 +1,10 @@
+13th and 16th
+https://earth.google.com/web/@29.63642425,-82.33938148,27.89511361a,182.66304298d,35y,0.00000001h,0.08190533t,0r
+
+R/TH/L
+SB-4lanes 1/2/1
+EB-3lanes 1/2*/1
+NB-4lane 1/2*/2
+WB-5lane 1/2/2
+
+* shared
