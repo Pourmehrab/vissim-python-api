@@ -2239,7 +2239,7 @@
 			</model2D3DSegs>
 		</model2D3D>
 	</models2D3D>
-	<netPara concatMaxLen="255" concatSeparator="," databFilename="" drivSimActive="false" leftHandTraffic="false" northDir="0.000000" pedDefCellSize="0.150000" pedDefObstDist="0.500000" pedDirChgAngle="4.000000" pedDirChgClip="true" pedNbhSearGridSize="5.000000" pedQueueOrder="0.700000" pedQueueStraight="0.600000" powWghtRatioMax="30.000000" powWghtRatioMin="7.000000" radExper="2.000000" sig3DColArrow="false" unitAccel="METRIC" unitLenLong="METRIC" unitLenShort="METRIC" unitLenVeryShort="METRIC" unitSpeed="METRIC" unitSpeedSmall="METRIC" useGradFromZCoord="false">
+	<netPara concatMaxLen="255" concatSeparator="," databFilename="" drivSimActive="false" leftHandTraffic="false" northDir="0.000000" pedDefCellSize="0.150000" pedDefObstDist="0.500000" pedDirChgAngle="4.000000" pedDirChgClip="true" pedNbhSearGridSize="5.000000" pedQueueOrder="0.700000" pedQueueStraight="0.600000" powWghtRatioMax="30.000000" powWghtRatioMin="7.000000" radExper="2.000000" sig3DColArrow="false" unitAccel="IMPERIAL" unitLenLong="IMPERIAL" unitLenShort="IMPERIAL" unitLenVeryShort="IMPERIAL" unitSpeed="IMPERIAL" unitSpeedSmall="IMPERIAL" useGradFromZCoord="false">
 		<refPointMap x="-9155726.812438" y="3453062.619636"/>
 		<refPointNet x="0.000000" y="0.000000"/>
 	</netPara>
@@ -2506,10 +2506,10 @@
 		</vehicleClass>
 	</vehicleClasses>
 	<vehicleCompositions>
-		<vehicleComposition name="Default" no="1">
+		<vehicleComposition name="MyCompo" no="1">
 			<vehCompRelFlows>
-				<vehicleCompositionRelativeFlow desSpeedDistr="50" relFlow="0.980000" vehType="100"/>
-				<vehicleCompositionRelativeFlow desSpeedDistr="50" relFlow="0.020000" vehType="200"/>
+				<vehicleCompositionRelativeFlow desSpeedDistr="50" relFlow="0.500000" vehType="100"/>
+				<vehicleCompositionRelativeFlow desSpeedDistr="50" relFlow="0.500000" vehType="610"/>
 			</vehCompRelFlows>
 		</vehicleComposition>
 	</vehicleCompositions>
@@ -2655,6 +2655,14 @@
 			</parkLotSelPars>
 		</vehicleType>
 		<vehicleType alightTm="0.000000" anmFlag="false" boardTm="0.000000" capacity="0" category="BIKE" clearTm="0.000000" colorDistr1="101" colorDistr2="102" colorDistr3="103" colorDistr4="60" desAccelFunc="6" desDecelFunc="6" distCoeffPerMeter="0.000000" dwellTmIsAdd="true" equip="" extDriver="false" extDriverDLLFile="" extDriverParFile="" extEmissionDLLFile="" linkCostCoeff="1.000000" maxAccelFunc="6" maxDecelFunc="6" model2D3DDistr="60" name="Bike" no="600" travTmCoeff="1.000000">
+			<parkLotSelPars>
+				<parkingLotSelectionParameters attrac="0.000000" avail="0.000000" decSituation="DEPARTUREFROMPARKINGLOT" distFromCurPosM="0.000000" distFromDestM="0.000000" parkFee="0.000000"/>
+				<parkingLotSelectionParameters attrac="0.000000" avail="0.000000" decSituation="DYNAMICROUTINGDECISION" distFromCurPosM="0.000000" distFromDestM="0.000000" parkFee="0.000000"/>
+				<parkingLotSelectionParameters attrac="0.000000" avail="0.000000" decSituation="ROUTEGUIDANCETACTIC1" distFromCurPosM="0.000000" distFromDestM="0.000000" parkFee="0.000000"/>
+				<parkingLotSelectionParameters attrac="0.000000" avail="0.000000" decSituation="ROUTEGUIDANCETACTIC2" distFromCurPosM="0.000000" distFromDestM="0.000000" parkFee="0.000000"/>
+			</parkLotSelPars>
+		</vehicleType>
+		<vehicleType alightTm="0.000000" anmFlag="false" boardTm="0.000000" capacity="9999" category="CAR" clearTm="0.000000" colorDistr1="1" desAccelFunc="1" desDecelFunc="1" distCoeffPerMeter="0.000000" dwellTmIsAdd="true" equip="" extDriver="false" extDriverDLLFile="" extDriverParFile="" extEmissionDLLFile="" linkCostCoeff="1.000000" maxAccelFunc="1" maxDecelFunc="1" model2D3DDistr="10" name="CAV" no="610" occupDistr="1" travTmCoeff="1.000000">
 			<parkLotSelPars>
 				<parkingLotSelectionParameters attrac="0.000000" avail="0.000000" decSituation="DEPARTUREFROMPARKINGLOT" distFromCurPosM="0.000000" distFromDestM="0.000000" parkFee="0.000000"/>
 				<parkingLotSelectionParameters attrac="0.000000" avail="0.000000" decSituation="DYNAMICROUTINGDECISION" distFromCurPosM="0.000000" distFromDestM="0.000000" parkFee="0.000000"/>

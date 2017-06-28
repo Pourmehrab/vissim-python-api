@@ -14,4 +14,14 @@ signal controller
 	signal program
 		signal group ~ signal head
 		
-set simulation resolution to 1 sec or signal switches does'nt work properly.
+set simulation resolution to 1 sec or signal switches doesn't work properly.
+
+Vehicle Input: VOlType -> Exact and not Stochastic
+
+Vehicle Composition:
+	RelFlow -> CAV rate
+	
+Change the unit to feet for trajectories to be meaningful.
+Base Data> Network setting> Units
+Change the color of CAV and conventioanl
+
