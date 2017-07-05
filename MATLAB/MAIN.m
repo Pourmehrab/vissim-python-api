@@ -28,34 +28,41 @@ SCFile  =           fopen(['BIN' filesep 'scenario',num2str(sc),'_SC.bin'],'w');
 
 %% IMPORT/DEFINE VARIABLES REQUIRED TO RUN THE SIMULATION
 
-simParameters.refFullTime           =   Vissim.Simulation.SimulationSecond;   % ge tthe simulation time from VISSIM
-
 perfMeasure  =  struct('LastThroughputByLane',zeros(1,intersectionConfig.NoOfLanes+1+1),...
     'LastArrival',zeros(1,intersectionConfig.NoOfLanes + 1));
 
 % ESTIMATE THE LAG TIME FOR THE AN SLOW VEHICLE
 oldVehIndx   = zeros(intersectionConfig.NoOfLanes,1); % THIS KEEPS WHERE LAST OLD VEHICLEIS IS PLACED IN MASTER VEHICLES STRUCTURE
-remainingVeh = ones(intersectionConfig.NoOfLanes,1); % THIS WILL KEPP HOW MANY OF GENERATED VEHICLES ARE NOT ADDED YET IN EACH LANE
 existingVeh  = zeros(intersectionConfig.NoOfLanes,1);
 tLag         = 0;
 for lane  =  1:intersectionConfig.NoOfLanes
-    remainingVeh(lane) = FullListOfVeh(lane).lastVehIndx - perfMeasure.LastArrival(lane+1);
     
-    [ ~,~,~,~,~,~,tLagP,~ ] = NonlinLTOsolver( commRange , intersectionConfig.minSpeed , ...
-        intersectionConfig.crossingSpeed(1) , intersectionConfig.safeSpeed , FullListOfVeh(lane).maxDeccRate(1) , FullListOfVeh(lane).maxAccRate(1) , [0, 1000] , simParameters);
+    [ ~,~,~,~,~,~,tLagP,~ ] = NonlinLTOsolver( dr , intersectionConfig.minSpeed , ...
+        intersectionConfig.crossingSpeed(1) , intersectionConfig.safeSpeed , -15 , 10 , [0, 1000] , simParameters);
     
     if tLag  <  tLagP
         tLag = tLagP;
     end
 end
 
-%
 
-%% SIGNAL VARIABLES INITIALIZATION
+%% ========================================================================
+% Begin the Simulation!
+%==========================================================================
+simParameters.refFullTime           =   0;   % set the simulation time from VISSIM
+Vissim.Simulation.RunSingleStep      ;      % if not, you caan't initialize signal
+
+%% ========================================================================
+% Signal Controller Phase and Timing Initialization
+%==========================================================================
 signal.nextPhasesSeq      = [1]; % PHASES CAME FROM THEORY
 signal.nextPhasesG        = [tLag - intersectionConfig.Y];
 signal.nextPhasesY        = [intersectionConfig.Y];
 signal.nextPhasesAR       = [intersectionConfig.AR];
+
+switchSignal( Vissim, 1, phasesLib(signal.nextPhasesSeq(1)).Lanes, 'GREEN' ); % possible values e.g. 'GREEN', 'RED', 'AMBER', 'REDAMBER'
+
+
 %DO NOT RECORD THIS SIGNAL DECISION SINCE NO VEHICLE CAN USE IT
 currFullTime              = simParameters.refFullTime;
 
@@ -103,7 +110,6 @@ while  true
                             ,lane,signal,intersectionConfig,phasesLib,simParameters,SCFile ); % FOR FDOT THIS FUNCTION ALSO CAN MODIFY SIGNALIZATION
                         if plot_traj && simParameters.globalTime >= t_plot_traj
                             TrajDiag(vehicles ,signal, phasesLib ,commRange ,simParameters.globalTime,simParameters.fig,intersectionConfig);
-                            remainingVeh
                         end
                         newVehArrived( lane ) = 0; % THE NEW VEHICLES ON CURRENT PHASE HAVE BEEN SERVED
                     end
@@ -185,12 +191,6 @@ while  true
             end
         end
     end
-    
-    if sum(existingVeh) == 0 && sum(remainingVeh) == 0 % TERMINATION CONDITION : SYSTEM IS EMPTY
-        break;
-    end
-    
-    pause(timeIncrement)
 end
 fclose('all');
 

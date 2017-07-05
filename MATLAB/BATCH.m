@@ -29,6 +29,9 @@ Filename                = fullfile(Path_of_VISSIM_files, strcat(Name,'.inpx'));
 flag_read_additionally  = false; % you can read network(elements) additionally, in this case set "flag_read_additionally" to true
 Vissim.LoadNet(Filename, flag_read_additionally);
 
+% Load Matlab Config file
+load(strcat(Name,'Config'));
+
 %% Load a Layout:
 Filename = fullfile(Path_of_VISSIM_files, strcat(Name,'.layx'));
 Vissim.LoadLayout(Filename);
@@ -38,18 +41,18 @@ sc = 0;
 
 numSim                  =   15                          ;
 End_of_simulation       =   30 * 60                     ;    % simulation second [s]: 15 min warmup period
-SimRes                  =   10                          ;    % number of steps in a sec
+SimRes                  =   1                          ;    % number of steps in a sec
 
 
 flowVol                 =   50:(450-50)/9:450           ;
 detRange                =   1500:-(1500-500)/9:500      ;
 CAVratio                =   1:-(1-0.3)/9:0.3            ;
 
-minHW                   =   [ 10, 1.5, 2.0 ]            ;
+minHW                   =   [ 1.0, 1.5, 2.0 ]           ;
 
 for  f = flowVol
     for r = CAVratio
-        for cr = detRange
+        for dr = detRange
             %% ============================================================
             % Network Configuration
             %==============================================================
@@ -59,6 +62,9 @@ for  f = flowVol
             
             initialSimParam;
             
+            %% ============================================================
+            % Run Simulation
+            %==============================================================
             sc          =       sc      +       1;
             MAIN;
             

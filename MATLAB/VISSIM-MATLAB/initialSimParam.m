@@ -32,5 +32,5 @@ VissimData.OptRange = zeros(size(VissimData.NumLanes));
 
 for ii = 1:VissimData.NumLinks
     VissimData.OptRange(ii) = get(Vissim.Net.Links.ItemByKey(ii),'AttValue'...
-        ,'length2D') - cr ;
+        ,'length2D') - dr ;
 end
