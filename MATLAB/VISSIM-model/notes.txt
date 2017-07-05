@@ -24,4 +24,5 @@ Vehicle Composition:
 Change the unit to feet for trajectories to be meaningful.
 Base Data> Network setting> Units
 Change the color of CAV and conventioanl
+Change Vehicle color for CAV, Conventionals
 

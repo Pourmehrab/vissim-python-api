@@ -1,32 +1,19 @@
 % BY:    MAHMOUD POURMEHRAB
 % EMAIL: MPOURMEHRAB@UFL.EDU
 
-clc;
-clear;
-close('all');
-fclose('all');
+% clc;
+% clear;
+% close('all');
+% fclose('all');
 % delete('*.bin');
 % delete('*.png');
-
-%% Path management
-p = pwd;
-f = filesep;
-
-addpath(genpath([p f 'trajectory-optimizer']),...
-    genpath([p f 'traffic-sim']));
 
 %% Run Modes
 plot_traj = 0;
 t_plot_traj = 0; % sec
 profile_code = 0;
 
-%% LOAD DATA FILE
-sc                          =           581;
-
-filename         =       ['scenario',num2str(sc),'_input.mat'];
-load (filename,'vehicles','phasesLib','simParameters','intersectionConfig','FullListOfVeh','simEndTime','commRange');
-
-% Create the bin and log dirs if they do not exist
+%% Create the bin and log dirs if they do not exist
 if ~exist('BIN', 'dir')
     mkdir('BIN')
 end
@@ -41,7 +28,7 @@ SCFile  =           fopen(['BIN' filesep 'scenario',num2str(sc),'_SC.bin'],'w');
 
 %% IMPORT/DEFINE VARIABLES REQUIRED TO RUN THE SIMULATION
 
-% simParameters.refFullTime           =   datetime('now');
+simParameters.refFullTime           =   Vissim.Simulation.SimulationSecond;   % ge tthe simulation time from VISSIM
 
 perfMeasure  =  struct('LastThroughputByLane',zeros(1,intersectionConfig.NoOfLanes+1+1),...
     'LastArrival',zeros(1,intersectionConfig.NoOfLanes + 1));

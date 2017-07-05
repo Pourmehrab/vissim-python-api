@@ -4,7 +4,7 @@
 % 1 right turn; 2 through; 3 left turn
 
 % Set Flow (Unit?):
-Vissim.Net.VehicleInputs.SetAllAttValues('Volume(1)',500)
+Vissim.Net.VehicleInputs.SetAllAttValues('Volume(1)',f)
 
 
 
