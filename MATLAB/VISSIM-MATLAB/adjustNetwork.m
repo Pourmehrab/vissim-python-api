@@ -6,6 +6,19 @@
 % Set Flow (Unit?):
 Vissim.Net.VehicleInputs.SetAllAttValues('Volume(1)',f)
 
+% Set vehicle composition:
+Veh_composition_number = 1;
+Rel_Flows = Vissim.Net.VehicleCompositions.ItemByKey(Veh_composition_number).VehCompRelFlows.GetAll;
+set(Rel_Flows{1}, 'AttValue', 'VehType',        100); % Changing the vehicle type
+set(Rel_Flows{1}, 'AttValue', 'DesSpeedDistr',   50); % Changing the desired speed distribution 
+% 50.0 kph is 45.6 fts or 31.1 mph
+set(Rel_Flows{1}, 'AttValue', 'RelFlow',        1-r); % Changing the relative flow
+
+set(Rel_Flows{2}, 'AttValue', 'VehType',        610); % Changing the vehicle type
+set(Rel_Flows{2}, 'AttValue', 'DesSpeedDistr',   50); % Changing the desired speed distribution 
+% 50.0 kph is 45.6 fts or 31.1 mph
+set(Rel_Flows{2}, 'AttValue', 'RelFlow',          r); % Changing the relative flow of the 2nd Relative Flow.
+
 
 
 %% ========================================================================

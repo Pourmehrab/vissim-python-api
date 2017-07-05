@@ -13,8 +13,6 @@ f = filesep;
 addpath(genpath([p f 'trajectory-optimizer']),...
     genpath([p f 'traffic-sim']),genpath([p f 'VISSIM-MATLAB']));
 
-load('VissimData.mat');
-
 %% Connecting the COM Server => Open a new Vissim Window:
 Vissim = actxserver('Vissim.Vissim-64.800');
 
@@ -46,7 +44,7 @@ SimRes                  =   1                          ;    % number of steps in
 
 flowVol                 =   50:(450-50)/9:450           ;
 detRange                =   1500:-(1500-500)/9:500      ;
-CAVratio                =   1:-(1-0.3)/9:0.3            ;
+CAVratio                =   0.99:-(0.99-0.1)/9:0.01            ;
 
 minHW                   =   [ 1.0, 1.5, 2.0 ]           ;
 
