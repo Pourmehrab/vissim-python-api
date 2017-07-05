@@ -34,16 +34,7 @@ perfMeasure  =  struct('LastThroughputByLane',zeros(1,intersectionConfig.NoOfLan
 % ESTIMATE THE LAG TIME FOR THE AN SLOW VEHICLE
 oldVehIndx   = zeros(intersectionConfig.NoOfLanes,1); % THIS KEEPS WHERE LAST OLD VEHICLEIS IS PLACED IN MASTER VEHICLES STRUCTURE
 existingVeh  = zeros(intersectionConfig.NoOfLanes,1);
-tLag         = 0;
-for lane  =  1:intersectionConfig.NoOfLanes
-    
-    [ ~,~,~,~,~,~,tLagP,~ ] = NonlinLTOsolver( dr , intersectionConfig.minSpeed , ...
-        intersectionConfig.crossingSpeed(1) , intersectionConfig.safeSpeed , -15 , 10 , [0, 1000] , simParameters);
-    
-    if tLag  <  tLagP
-        tLag = tLagP;
-    end
-end
+tLag         = dr / intersectionConfig.safeSpeed; % rough approximation on tLag (in second)
 
 
 %% ========================================================================
@@ -69,7 +60,9 @@ currFullTime              = simParameters.refFullTime;
 % currFullTime  =  datetime('now');
 
 %% MAIN CONTROL LOOP
-timeIncrement = 0.1;
+timeIncrement = 1 / SimRes; % this would be the time step length to oush forward simulation
+
+
 if plot_traj
     simParameters.fig   =   figure('Name','Trajectories per Lanes','NumberTitle','off','units','normalized','outerposition',[0 0 1 1],'Color','w');
 end
@@ -141,18 +134,27 @@ while  true
         signal.nextPhasesY(1)    =  signal.nextPhasesY(1) + signal.nextPhasesG(1) - timeIncrement;
         signal.nextPhasesG(1)    =  0;
         
+        % Time to make current phase yellow
+        switchSignal( Vissim, 1, phasesLib(signal.nextPhasesSeq(1)).Lanes, 'AMBER' ); % possible values e.g. 'GREEN', 'RED', 'AMBER', 'REDAMBER'
+
     elseif signal.nextPhasesG(1) + signal.nextPhasesY(1) + signal.nextPhasesAR(1) >= timeIncrement
         signal.nextPhasesAR(1)   =  signal.nextPhasesAR(1) + signal.nextPhasesY(1) + signal.nextPhasesG(1) - timeIncrement;
         signal.nextPhasesG(1)    =  0;
         signal.nextPhasesY(1)    =  0;
-        
+ 
+        % Time to make all phases red
+        switchSignal( Vissim, 1, [], 'RED' ); % possible values e.g. 'GREEN', 'RED', 'AMBER', 'REDAMBER'
+
     else
         signal.nextPhasesG(2)    =  signal.nextPhasesG(2) - (timeIncrement - signal.nextPhasesAR(1) - signal.nextPhasesY(1) - signal.nextPhasesG(1));
         signal.nextPhasesG(1)    =  [];
         signal.nextPhasesY(1)    =  [];
         signal.nextPhasesAR(1)   =  [];
         signal.nextPhasesSeq(1)  =  [];
-    end
+        
+        % Time to make the next phase green
+        switchSignal( Vissim, 1, phasesLib(signal.nextPhasesSeq(1)).Lanes, 'GREEN' ); % possible values e.g. 'GREEN', 'RED', 'AMBER', 'REDAMBER'
+end
     
     if length(signal.nextPhasesSeq) == 1 && signal.nextPhasesG <= tLag - intersectionConfig.Y
         signal.nextPhasesG = tLag - intersectionConfig.Y;  % THIS WAY WE ARE ALWAYS READY FOR NEW VEHICLES WHILE SIGNAL DECISION NEVER GETS EMPTY
