@@ -30,7 +30,7 @@ set(Vissim.Simulation, 'AttValue', 'SimRes', SimRes);
 % Extract link lenghts from Vissim model
 VissimData.OptRange = zeros(intersectionConfig.NoOfLanes,1);
 
-for ii = 1:intersectionConfig.NoOfLanes
-    VissimData.OptRange(ii) = get(Vissim.Net.Links.ItemByKey(ii),'AttValue'...
+for lane = 1:intersectionConfig.NoOfLanes
+    VissimData.OptRange(lane) = get(Vissim.Net.Links.ItemByKey(lane),'AttValue'...
         ,'length2D') - dr ;
 end

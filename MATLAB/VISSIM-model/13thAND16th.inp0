@@ -2416,7 +2416,7 @@
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="13 1" localNo="0" name="EB-L1" no="15" pos="937.050028" sg="1 15" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="13 2" localNo="0" name="EB-L2" no="16" pos="937.055608" sg="1 16" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 	</signalHeads>
-	<simulation comment="" numCores="1" numRuns="1" randSeed="744" randSeedIncr="1" retroSync="false" simMode="MICRO" simPeriod="900" simRes="1" simSpeed="5.000000" startTm="0.000000" useAllCores="true" useMaxSimSpeed="true" volumeIncrDynAssign="0.000000"/>
+	<simulation comment="" numCores="1" numRuns="1" randSeed="744" randSeedIncr="1" retroSync="false" simMode="MICRO" simPeriod="3600" simRes="1" simSpeed="5.000000" startTm="0.000000" useAllCores="true" useMaxSimSpeed="true" volumeIncrDynAssign="0.000000"/>
 	<timeDistributions>
 		<timeDistribution mean="20.000000" name="20 s ±" no="1" stdDev="2.000000" type="NORMAL"/>
 	</timeDistributions>
@@ -2424,6 +2424,7 @@
 		<timeIntervalSet no="VEHICLEINPUT">
 			<timeInts>
 				<timeInterval start="0.000000"/>
+				<timeInterval start="1800.000000"/>
 			</timeInts>
 		</timeIntervalSet>
 		<timeIntervalSet no="VEHICLEROUTESTATIC">
@@ -2508,70 +2509,82 @@
 	<vehicleCompositions>
 		<vehicleComposition name="MyCompo" no="1">
 			<vehCompRelFlows>
-				<vehicleCompositionRelativeFlow desSpeedDistr="50" relFlow="0.500000" vehType="100"/>
-				<vehicleCompositionRelativeFlow desSpeedDistr="50" relFlow="0.500000" vehType="610"/>
+				<vehicleCompositionRelativeFlow desSpeedDistr="50" relFlow="0.010000" vehType="100"/>
+				<vehicleCompositionRelativeFlow desSpeedDistr="50" relFlow="0.990000" vehType="610"/>
 			</vehCompRelFlows>
 		</vehicleComposition>
 	</vehicleCompositions>
 	<vehicleInputs>
 		<vehicleInput anmFlag="false" link="1" name="SB-R" no="1">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="2" name="SB-T" no="2">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="4" name="SB-L" no="3">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="5" name="WB-RT" no="4">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="6" name="WB-T" no="5">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="7" name="WB-T" no="6">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="8" name="NB-RT" no="7">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="9" name="NB-T" no="8">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="10" name="NB-L" no="9">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="11" name="EB-R" no="10">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="12" name="EB-T" no="11">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="13" name="EB-R" no="12">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 	</vehicleInputs>

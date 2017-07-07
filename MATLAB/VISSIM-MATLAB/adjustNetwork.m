@@ -3,9 +3,6 @@
 % 1 SB; 2 EB; 3 NB; 4 WB
 % 1 right turn; 2 through; 3 left turn
 
-% Set Flow (Unit?):
-Vissim.Net.VehicleInputs.SetAllAttValues('Volume(1)',f)
-
 % Set vehicle composition:
 Veh_composition_number = 1;
 Rel_Flows = Vissim.Net.VehicleCompositions.ItemByKey(Veh_composition_number).VehCompRelFlows.GetAll;
@@ -19,12 +16,16 @@ set(Rel_Flows{2}, 'AttValue', 'DesSpeedDistr',   50); % Changing the desired spe
 % 50.0 kph is 45.6 fts or 31.1 mph
 set(Rel_Flows{2}, 'AttValue', 'RelFlow',          r); % Changing the relative flow of the 2nd Relative Flow.
 
+% Set Flow (Unit?):
 
+Vissim.Net.VehicleInputs.SetAllAttValues('Cont(2)',false)
+Vissim.Net.VehicleInputs.SetAllAttValues('Volume(1)',f)
+Vissim.Net.VehicleInputs.SetAllAttValues('Volume(2)',0)
 
 %% ========================================================================
-% Saving
+% Saving the Network
 %==========================================================================
-Filename = fullfile(Path_of_VISSIM_files, strcat(Name,'.inpx'));
-Vissim.SaveNetAs(Filename)
-Filename = fullfile(Path_of_VISSIM_files, strcat(Name,'.layx'));
-Vissim.SaveLayout(Filename)
+% Filename = fullfile(Path_of_VISSIM_files, strcat(Name,'.inpx'));
+% Vissim.SaveNetAs(Filename)
+% Filename = fullfile(Path_of_VISSIM_files, strcat(Name,'.layx'));
+% Vissim.SaveLayout(Filename)

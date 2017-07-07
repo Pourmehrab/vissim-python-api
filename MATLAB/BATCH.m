@@ -38,7 +38,10 @@ Vissim.LoadLayout(Filename);
 sc = 0;
 
 numSim                  =   15                          ;
-End_of_simulation       =   30 * 60                     ;    % simulation second [s]: 15 min warmup period
+End_of_simulation       =   30 * 60 * 2                 ;    % simulation second [s]: 15 min warmup period
+% 15 min data collection, up to 30 min for network evacuation
+End_of_veh_input        =   0.5 * End_of_simulation     ;  
+
 SimRes                  =   1                          ;    % number of steps in a sec
 
 
@@ -68,9 +71,9 @@ for  f = flowVol
             
         end
     end
-    %     clearvars -except AveHeadway commRange AVPercent sc RESULT aggTravelTime
     
 end
-save('FINALRESULT.mat');
-
-%     extractOutputs;
+%% ========================================================================
+% End Vissim
+%==========================================================================
+Vissim.release

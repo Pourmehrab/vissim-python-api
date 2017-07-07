@@ -43,6 +43,36 @@ tLag         = dr / intersectionConfig.safeSpeed; % rough approximation on tLag 
 simParameters.refFullTime           =   0;   % set the simulation time from VISSIM
 Vissim.Simulation.RunSingleStep      ;      % if not, you caan't initialize signal
 
+% initialize vehicle struct
+vehicles = repmat(struct('vehID', '', 'type','','vehIndx','','initTime','',...
+    'length','','maxAccRate','','maxDeccRate','','destination','',...
+    'currSpeed','','desiredSpeed','','trajectory','',...
+    'trajPointIndx','','commRange','','served','',...
+    'trajReceived','','idealTraj','','distance',''...
+    ), intersectionConfig.NoOfLanes, 1);
+
+for lane = 1 : intersectionConfig.NoOfLanes
+    vehicles(lane)               = struct(...
+        'vehID',                   zeros(intersectionConfig.maxNo(lane).vehsPerLane, 1)...
+        ,'type',                    zeros(intersectionConfig.maxNo(lane).vehsPerLane, 1)...
+        ,'vehIndx',                 zeros(1,2)...
+        ,'initTime',                zeros(intersectionConfig.maxNo(lane).vehsPerLane, 3)...
+        ,'length',                  zeros(intersectionConfig.maxNo(lane).vehsPerLane, 1)...
+        ,'maxAccRate',              zeros(intersectionConfig.maxNo(lane).vehsPerLane, 1)...
+        ,'maxDeccRate',             zeros(intersectionConfig.maxNo(lane).vehsPerLane, 1)...
+        ,'destination',             zeros(intersectionConfig.maxNo(lane).vehsPerLane, 1)...
+        ,'currSpeed',               zeros(intersectionConfig.maxNo(lane).vehsPerLane, 1)...
+        ,'desiredSpeed',            zeros(intersectionConfig.maxNo(lane).vehsPerLane, 1)...
+        ,'trajectory',              {cell(intersectionConfig.maxNo(lane).vehsPerLane, 1)}...
+        ,'trajPointIndx',           zeros(intersectionConfig.maxNo(lane).vehsPerLane, 2)...
+        ,'commRange',               dr...
+        ,'served',                  zeros(intersectionConfig.maxNo(lane).vehsPerLane, 1)...
+        ,'trajReceived',            zeros(intersectionConfig.maxNo(lane).vehsPerLane, 1)...
+        ,'idealTraj',               zeros(intersectionConfig.maxNo(lane).vehsPerLane, 7)...
+        ,'distance',                zeros(intersectionConfig.maxNo(lane).vehsPerLane, 1));
+    vehicles(lane).trajectory(:) = {zeros(intersectionConfig.maxNo(lane).trajPoints, 2)};
+end
+
 %% ========================================================================
 % Signal Controller Phase and Timing Initialization
 %==========================================================================
@@ -69,7 +99,10 @@ end
 if profile_code
     profile on
 end
-while  true
+
+numVehs = 0;
+while  simParameters.globalTime < End_of_veh_input || ...
+        numVehs         ~=          0
     
     ProcessIncommingMsg;
     
@@ -111,21 +144,12 @@ while  true
         end
     end
     
-    t = currFullTime(3) + timeIncrement;
-    currFullTime(3) = t;
-    if t >= 60 % SINCE THE INCREMENT IS SMALL, NO NEED TO USE MOD: NEVER HAVE 2 MIN OR 2 HR JUMP
-        currFullTime(3) = t - 60;
-        currFullTime(2) = currFullTime(2) + 1;
-        
-        if currFullTime(2) >= 60
-            currFullTime(2) = currFullTime(2) - 60;
-            currFullTime(1) = currFullTime(1) + 1;
-        end
-    end
+    Vissim.Simulation.RunSingleStep;
     
-    simParameters.globalTime  =  (currFullTime(1)-simParameters.refFullTime(1))*3600+...
-        (currFullTime(2)-simParameters.refFullTime(2))*60+...
-        (currFullTime(3)-simParameters.refFullTime(3));
+    %     currFullTime = currFullTime + timeIncrement;
+    currFullTime = Vissim.Simulation.SimulationSecond;
+    
+    simParameters.globalTime  =  currFullTime - simParameters.refFullTime;
     
     if signal.nextPhasesG(1)    >=  timeIncrement
         signal.nextPhasesG(1)    =  signal.nextPhasesG(1) - timeIncrement;
@@ -136,15 +160,15 @@ while  true
         
         % Time to make current phase yellow
         switchSignal( Vissim, 1, phasesLib(signal.nextPhasesSeq(1)).Lanes, 'AMBER' ); % possible values e.g. 'GREEN', 'RED', 'AMBER', 'REDAMBER'
-
+        
     elseif signal.nextPhasesG(1) + signal.nextPhasesY(1) + signal.nextPhasesAR(1) >= timeIncrement
         signal.nextPhasesAR(1)   =  signal.nextPhasesAR(1) + signal.nextPhasesY(1) + signal.nextPhasesG(1) - timeIncrement;
         signal.nextPhasesG(1)    =  0;
         signal.nextPhasesY(1)    =  0;
- 
+        
         % Time to make all phases red
         switchSignal( Vissim, 1, [], 'RED' ); % possible values e.g. 'GREEN', 'RED', 'AMBER', 'REDAMBER'
-
+        
     else
         signal.nextPhasesG(2)    =  signal.nextPhasesG(2) - (timeIncrement - signal.nextPhasesAR(1) - signal.nextPhasesY(1) - signal.nextPhasesG(1));
         signal.nextPhasesG(1)    =  [];
@@ -154,12 +178,14 @@ while  true
         
         % Time to make the next phase green
         switchSignal( Vissim, 1, phasesLib(signal.nextPhasesSeq(1)).Lanes, 'GREEN' ); % possible values e.g. 'GREEN', 'RED', 'AMBER', 'REDAMBER'
-end
+    end
     
     if length(signal.nextPhasesSeq) == 1 && signal.nextPhasesG <= tLag - intersectionConfig.Y
         signal.nextPhasesG = tLag - intersectionConfig.Y;  % THIS WAY WE ARE ALWAYS READY FOR NEW VEHICLES WHILE SIGNAL DECISION NEVER GETS EMPTY
         fwrite(SCFile,[simParameters.globalTime signal.nextPhasesSeq(end) signal.nextPhasesG(end) signal.nextPhasesY(end) signal.nextPhasesAR(end)]*1000,'int');
     end
+    
+    Vissim.Simulation.RunSingleStep; % move simulation one step further
     
     
     %     MONITOR AND UPDATE

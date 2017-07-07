@@ -1,4 +1,4 @@
-function [ output_args ] = moveVeh2Pos( Vehicle, speed, link_coordinate )
+function [ output_args ] = moveVeh2Pos( Vehicle, speed, link_number, lane_number, link_coordinate )
 %MOVEVEH2POS Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -14,14 +14,19 @@ function [ output_args ] = moveVeh2Pos( Vehicle, speed, link_coordinate )
 % Kind Regards, 
 % Jochen
 
+% LaneLink = sscanf(get(All_Vehicles{1},'AttValue','Lane'),'%d',[1 2]);
+% Vissim_link_number = LaneLink(1);
+% Vissim_lane_number = -LaneLink(2);
+% DON'T NEED THIS, USE LINK NO
 
-link_number = get(Vehicle.Lane,'AttValue','Link');
-lane_number = get(Vehicle,'AttValue','Lane');
+% link_number = get(Vehicle.Lane,'AttValue','Link');
+% lane_number = get(Vehicle,'AttValue','Lane');
 % get link, lane, distance, type, speed for an specific ID: here 'No'
 % get(All_Vehicles{1},'AttValue','Pos');
 % get(All_Vehicles{1},'AttValue','Speed');
 
-set(Vehicle, 'AttValue', 'Speed', 0);
+
+set(Vehicle, 'AttValue', 'Speed', speed);
 
 
 % Move a vehicle:
