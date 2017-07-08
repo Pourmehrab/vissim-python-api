@@ -104,7 +104,7 @@ numVehs = 0;
 while  simParameters.globalTime < End_of_veh_input || ...
         numVehs         ~=          0
     
-    ProcessIncommingMsg;
+    ProcessIncomingMsg;
     
     %     currFullTime  =  datetime('now');
     

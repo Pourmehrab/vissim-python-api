@@ -185,6 +185,24 @@
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10009" link2="10013" mesoCritGap="3.000000" no="47" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10010" link2="10013" mesoCritGap="3.000000" no="48" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 	</conflictAreas>
+	<dataCollectionPoints>
+		<dataCollectionPoint lane="1 1" name="" no="1" pos="551.727215"/>
+		<dataCollectionPoint lane="2 1" name="" no="2" pos="551.719612"/>
+		<dataCollectionPoint lane="2 2" name="" no="3" pos="551.698151"/>
+		<dataCollectionPoint lane="4 1" name="" no="4" pos="551.894287"/>
+		<dataCollectionPoint lane="5 1" name="" no="5" pos="848.987655"/>
+		<dataCollectionPoint lane="6 1" name="" no="6" pos="849.094049"/>
+		<dataCollectionPoint lane="7 1" name="" no="7" pos="849.048264"/>
+		<dataCollectionPoint lane="8 1" name="" no="8" pos="851.372436"/>
+		<dataCollectionPoint lane="9 1" name="" no="9" pos="851.629113"/>
+		<dataCollectionPoint lane="10 1" name="" no="10" pos="851.389808"/>
+		<dataCollectionPoint lane="10 2" name="" no="11" pos="851.631880"/>
+		<dataCollectionPoint lane="11 1" name="" no="12" pos="866.071145"/>
+		<dataCollectionPoint lane="12 1" name="" no="13" pos="866.213512"/>
+		<dataCollectionPoint lane="12 2" name="" no="14" pos="865.972711"/>
+		<dataCollectionPoint lane="13 1" name="" no="15" pos="865.451949"/>
+		<dataCollectionPoint lane="13 2" name="" no="16" pos="865.782478"/>
+	</dataCollectionPoints>
 	<desAccelerationFunctions>
 		<desAccelerationFunction name="Car" no="1">
 			<accelFuncDataPts>

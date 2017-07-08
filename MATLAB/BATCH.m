@@ -43,6 +43,7 @@ End_of_simulation       =   30 * 60 * 2                 ;    % simulation second
 End_of_veh_input        =   0.5 * End_of_simulation     ;  
 
 SimRes                  =   1                          ;    % number of steps in a sec
+% the inverse of this should not exceed trajectory resolution
 
 
 flowVol                 =   50:(450-50)/9:450           ;
