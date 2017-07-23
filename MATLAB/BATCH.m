@@ -38,17 +38,17 @@ Vissim.LoadLayout(Filename);
 sc = 0;
 
 numSim                  =   15                          ;
-End_of_simulation       =   30 * 60 * 2                 ;    % simulation second [s]: 15 min warmup period
+End_of_simulation       =   30  * 60  *  2              ;    % simulation second [s]: 15 min warmup period
 % 15 min data collection, up to 30 min for network evacuation
-End_of_veh_input        =   0.5 * End_of_simulation     ;  
+End_of_veh_input        =   0.5 * End_of_simulation     ;
 
-SimRes                  =   1                          ;    % number of steps in a sec
+SimRes                  =   10                          ;    % number of steps in a sec
 % the inverse of this should not exceed trajectory resolution
 
 
 flowVol                 =   50:(450-50)/9:450           ;
+CAVratio                =   0.99:-(0.99-0.1)/9:0.01     ;
 detRange                =   1500:-(1500-500)/9:500      ;
-CAVratio                =   0.99:-(0.99-0.1)/9:0.01            ;
 
 minHW                   =   [ 1.0, 1.5, 2.0 ]           ;
 
@@ -58,7 +58,7 @@ for  f = flowVol
             %% ============================================================
             % Network Configuration
             %==============================================================
-
+            
             adjustNetwork;
             
             
@@ -68,6 +68,7 @@ for  f = flowVol
             % Run Simulation
             %==============================================================
             sc          =       sc      +       1;
+%             Vissim.SuspendUpdateGUI; %  stop updating of the complete Vissim workspace (network editor, list, chart and signal time table windows)
             MAIN;
             
         end

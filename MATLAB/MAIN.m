@@ -34,7 +34,7 @@ perfMeasure  =  struct('LastThroughputByLane',zeros(1,intersectionConfig.NoOfLan
 % ESTIMATE THE LAG TIME FOR THE AN SLOW VEHICLE
 oldVehIndx   = zeros(intersectionConfig.NoOfLanes,1); % THIS KEEPS WHERE LAST OLD VEHICLEIS IS PLACED IN MASTER VEHICLES STRUCTURE
 existingVeh  = zeros(intersectionConfig.NoOfLanes,1);
-tLag         = dr / intersectionConfig.safeSpeed; % rough approximation on tLag (in second)
+tLag         = dr / max(intersectionConfig.safeSpeed); % rough approximation on tLag (in second)
 
 
 %% ========================================================================
@@ -101,9 +101,11 @@ if profile_code
 end
 
 numVehs = 0;
-while  simParameters.globalTime < End_of_veh_input || ...
+while  simParameters.globalTime < End_of_veh_input || ... % Termination Criteria
         numVehs         ~=          0
     
+    %     currFullTime = currFullTime + timeIncrement;
+    currFullTime = Vissim.Simulation.SimulationSecond;
     ProcessIncomingMsg;
     
     %     currFullTime  =  datetime('now');
@@ -144,10 +146,9 @@ while  simParameters.globalTime < End_of_veh_input || ...
         end
     end
     
-    Vissim.Simulation.RunSingleStep;
+    implementTrajectories(vehicles, intersectionConfig, simParameters);
     
-    %     currFullTime = currFullTime + timeIncrement;
-    currFullTime = Vissim.Simulation.SimulationSecond;
+    Vissim.Simulation.RunSingleStep; % move simulation one step further
     
     simParameters.globalTime  =  currFullTime - simParameters.refFullTime;
     
@@ -185,14 +186,13 @@ while  simParameters.globalTime < End_of_veh_input || ...
         fwrite(SCFile,[simParameters.globalTime signal.nextPhasesSeq(end) signal.nextPhasesG(end) signal.nextPhasesY(end) signal.nextPhasesAR(end)]*1000,'int');
     end
     
-    Vissim.Simulation.RunSingleStep; % move simulation one step further
     
     
     %     MONITOR AND UPDATE
     for lane  =  1:intersectionConfig.NoOfLanes
         if vehicles(lane).vehIndx(1) ~= 0
             
-            NoOfVehs       = mod(vehicles(lane).vehIndx(2) - vehicles(lane).vehIndx(1) + 1, intersectionConfig.maxNoVehsPerLane);
+            NoOfVehs       = mod(vehicles(lane).vehIndx(2) - vehicles(lane).vehIndx(1) + 1, intersectionConfig.maxNo(lane).vehsPerLane);
             vehCounter     = 0;
             vehIndx        = vehicles(lane).vehIndx(1);
             while vehicles(lane).trajectory{vehIndx}(vehicles(lane).trajPointIndx(vehIndx,2),1) <= simParameters.globalTime && vehCounter < NoOfVehs
@@ -204,16 +204,18 @@ while  simParameters.globalTime < End_of_veh_input || ...
                 
                 fwrite(TTFile,[lane vehicles(lane).initTime(vehIndx) vehicles(lane).trajectory{vehIndx}(vehicles(lane).trajPointIndx(vehIndx,2),1) vehicles(lane).idealTraj(vehIndx,7) vehicles(lane).trajectory{vehIndx}(vehicles(lane).trajPointIndx(vehIndx,1),1) vehicles(lane).type(vehIndx)]*1000,'int');
                 
-                vehCounter  =   vehCounter  +   1;
+                vehCounter          =   vehCounter          +   1       ;
                 
-                existingVeh(lane)  = existingVeh(lane) - 1;
+                existingVeh(lane)   =   existingVeh(lane)   -   1       ;
                 
+                % HERE GIVE THE CONTROL OF THIS VEHICLE BACK TO VISSIM (FIND THE RIGHT ID)
+                %                set(All_Vehicles{1}, 'AttValue', 'ExtContr ', 1);
                 if vehIndx == vehicles(lane).vehIndx(2)
                     vehicles(lane).vehIndx(1) = 0;
                     vehicles(lane).vehIndx(2) = 0;
                     break;
                 else
-                    vehIndx     =   1  +   mod(vehIndx,intersectionConfig.maxNoVehsPerLane);
+                    vehIndx     =   1  +   mod(vehIndx,intersectionConfig.maxNo(lane).vehsPerLane);
                     vehicles(lane).vehIndx(1) = vehIndx;
                 end
             end
@@ -229,5 +231,3 @@ end
 
 save(['scenario',num2str(sc),'_output.mat']);
 %
-
-

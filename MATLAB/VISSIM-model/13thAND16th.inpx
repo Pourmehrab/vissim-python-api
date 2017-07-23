@@ -138,10 +138,8 @@
 		</colorDistribution>
 	</colorDistributions>
 	<conflictAreas>
-		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="2" link2="3" mesoCritGap="3.000000" no="1" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
-		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="17" link2="10000" mesoCritGap="3.000000" no="3" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
-		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="3" link2="10001" mesoCritGap="3.000000" no="4" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
-		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="14" link2="10003" mesoCritGap="3.000000" no="5" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
+		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="16" link2="10000" mesoCritGap="3.000000" no="3" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
+		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="13" link2="10003" mesoCritGap="3.000000" no="5" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10000" link2="10004" mesoCritGap="3.000000" no="6" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10001" link2="10004" mesoCritGap="3.000000" no="7" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10002" link2="10004" mesoCritGap="3.000000" no="8" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
@@ -150,7 +148,7 @@
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10002" link2="10005" mesoCritGap="3.000000" no="11" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10001" link2="10006" mesoCritGap="3.000000" no="12" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10002" link2="10006" mesoCritGap="3.000000" no="13" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
-		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="14" link2="10008" mesoCritGap="3.000000" no="14" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
+		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="13" link2="10008" mesoCritGap="3.000000" no="14" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10002" link2="10008" mesoCritGap="3.000000" no="15" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10003" link2="10008" mesoCritGap="3.000000" no="16" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10004" link2="10008" mesoCritGap="3.000000" no="17" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
@@ -161,7 +159,7 @@
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10004" link2="10009" mesoCritGap="3.000000" no="22" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10005" link2="10009" mesoCritGap="3.000000" no="23" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10006" link2="10009" mesoCritGap="3.000000" no="24" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
-		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="17" link2="10010" mesoCritGap="3.000000" no="25" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
+		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="16" link2="10010" mesoCritGap="3.000000" no="25" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10000" link2="10010" mesoCritGap="3.000000" no="26" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10001" link2="10010" mesoCritGap="3.000000" no="27" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10004" link2="10010" mesoCritGap="3.000000" no="28" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
@@ -175,7 +173,7 @@
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10008" link2="10012" mesoCritGap="3.000000" no="36" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10009" link2="10012" mesoCritGap="3.000000" no="37" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10010" link2="10012" mesoCritGap="3.000000" no="38" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
-		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="14" link2="10013" mesoCritGap="3.000000" no="40" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
+		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="13" link2="10013" mesoCritGap="3.000000" no="40" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10001" link2="10013" mesoCritGap="3.000000" no="41" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10002" link2="10013" mesoCritGap="3.000000" no="42" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10003" link2="10013" mesoCritGap="3.000000" no="43" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
@@ -186,38 +184,38 @@
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10010" link2="10013" mesoCritGap="3.000000" no="48" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 	</conflictAreas>
 	<dataCollectionPoints>
-		<dataCollectionPoint lane="1 1" name="" no="1" pos="551.727215"/>
-		<dataCollectionPoint lane="2 1" name="" no="2" pos="551.719612"/>
-		<dataCollectionPoint lane="2 2" name="" no="3" pos="551.698151"/>
-		<dataCollectionPoint lane="4 1" name="" no="4" pos="551.894287"/>
-		<dataCollectionPoint lane="5 1" name="" no="5" pos="848.987655"/>
-		<dataCollectionPoint lane="6 1" name="" no="6" pos="849.094049"/>
-		<dataCollectionPoint lane="7 1" name="" no="7" pos="849.048264"/>
-		<dataCollectionPoint lane="8 1" name="" no="8" pos="851.372436"/>
-		<dataCollectionPoint lane="9 1" name="" no="9" pos="851.629113"/>
-		<dataCollectionPoint lane="10 1" name="" no="10" pos="851.389808"/>
-		<dataCollectionPoint lane="10 2" name="" no="11" pos="851.631880"/>
-		<dataCollectionPoint lane="11 1" name="" no="12" pos="866.071145"/>
-		<dataCollectionPoint lane="12 1" name="" no="13" pos="866.213512"/>
-		<dataCollectionPoint lane="12 2" name="" no="14" pos="865.972711"/>
-		<dataCollectionPoint lane="13 1" name="" no="15" pos="865.451949"/>
-		<dataCollectionPoint lane="13 2" name="" no="16" pos="865.782478"/>
-		<dataCollectionPoint lane="1 1" name="" no="17" pos="565.708006"/>
-		<dataCollectionPoint lane="2 1" name="" no="18" pos="565.744755"/>
-		<dataCollectionPoint lane="2 2" name="" no="19" pos="565.588192"/>
-		<dataCollectionPoint lane="4 1" name="" no="20" pos="565.763416"/>
-		<dataCollectionPoint lane="5 1" name="" no="21" pos="870.736652"/>
-		<dataCollectionPoint lane="6 1" name="" no="22" pos="870.451064"/>
-		<dataCollectionPoint lane="7 1" name="" no="23" pos="869.920688"/>
-		<dataCollectionPoint lane="8 1" name="" no="24" pos="884.852628"/>
-		<dataCollectionPoint lane="9 1" name="" no="25" pos="884.627668"/>
-		<dataCollectionPoint lane="10 1" name="" no="26" pos="884.147313"/>
-		<dataCollectionPoint lane="10 2" name="" no="27" pos="884.148613"/>
-		<dataCollectionPoint lane="11 1" name="" no="28" pos="916.475678"/>
-		<dataCollectionPoint lane="12 1" name="" no="29" pos="916.635008"/>
-		<dataCollectionPoint lane="12 2" name="" no="30" pos="916.487801"/>
-		<dataCollectionPoint lane="13 1" name="" no="31" pos="915.766143"/>
-		<dataCollectionPoint lane="13 2" name="" no="32" pos="915.369251"/>
+		<dataCollectionPoint lane="1 1" name="" no="1" pos="0.000000"/>
+		<dataCollectionPoint lane="2 1" name="" no="2" pos="0.000000"/>
+		<dataCollectionPoint lane="2 2" name="" no="3" pos="0.000000"/>
+		<dataCollectionPoint lane="3 1" name="" no="4" pos="0.000000"/>
+		<dataCollectionPoint lane="4 1" name="" no="5" pos="0.000000"/>
+		<dataCollectionPoint lane="5 1" name="" no="6" pos="0.000000"/>
+		<dataCollectionPoint lane="6 1" name="" no="7" pos="0.000000"/>
+		<dataCollectionPoint lane="7 1" name="" no="8" pos="0.000000"/>
+		<dataCollectionPoint lane="8 1" name="" no="9" pos="0.000000"/>
+		<dataCollectionPoint lane="9 1" name="" no="10" pos="0.000000"/>
+		<dataCollectionPoint lane="9 2" name="" no="11" pos="0.000000"/>
+		<dataCollectionPoint lane="10 1" name="" no="12" pos="0.000000"/>
+		<dataCollectionPoint lane="11 1" name="" no="13" pos="0.000000"/>
+		<dataCollectionPoint lane="11 2" name="" no="14" pos="0.000000"/>
+		<dataCollectionPoint lane="12 1" name="" no="15" pos="0.000000"/>
+		<dataCollectionPoint lane="12 2" name="" no="16" pos="0.000000"/>
+		<dataCollectionPoint lane="1 1" name="" no="17" pos="0.000000"/>
+		<dataCollectionPoint lane="2 1" name="" no="18" pos="0.000000"/>
+		<dataCollectionPoint lane="2 2" name="" no="19" pos="0.000000"/>
+		<dataCollectionPoint lane="3 1" name="" no="20" pos="0.000000"/>
+		<dataCollectionPoint lane="4 1" name="" no="21" pos="0.000000"/>
+		<dataCollectionPoint lane="5 1" name="" no="22" pos="0.000000"/>
+		<dataCollectionPoint lane="6 1" name="" no="23" pos="0.000000"/>
+		<dataCollectionPoint lane="7 1" name="" no="24" pos="0.000000"/>
+		<dataCollectionPoint lane="8 1" name="" no="25" pos="0.000000"/>
+		<dataCollectionPoint lane="9 1" name="" no="26" pos="0.000000"/>
+		<dataCollectionPoint lane="9 2" name="" no="27" pos="0.000000"/>
+		<dataCollectionPoint lane="10 1" name="" no="28" pos="0.000000"/>
+		<dataCollectionPoint lane="11 1" name="" no="29" pos="0.000000"/>
+		<dataCollectionPoint lane="11 2" name="" no="30" pos="0.000000"/>
+		<dataCollectionPoint lane="12 1" name="" no="31" pos="0.000000"/>
+		<dataCollectionPoint lane="12 2" name="" no="32" pos="0.000000"/>
 	</dataCollectionPoints>
 	<desAccelerationFunctions>
 		<desAccelerationFunction name="Car" no="1">
@@ -998,7 +996,7 @@
 		<displayType allSidesSame="false" anisoFilt="true" borderColor="fffff1b2" borderLineStyle="SOLIDLINE" curved="false" fillColor="fffff1b2" fillStyle="NOFILL" invisible="false" name="Section" no="51" noMipmap="false" rail="false" railFlangeHgt="0.013000" railFlangeWid="0.150000" railGauge="1.435000" railHeadHgt="0.043000" railHeadWid="0.073000" railHgt="0.172000" railType="STANDARD" railWebWid="0.016000" shaded="false" texHorizLen="1.000000" textureFilename="" tiesHgt="0.020000" tiesLen="2.600000" tiesSpac="0.600000" tiesTexFilename="" tiesTexHorizLen="1.000000" tiesType="STANDARD" tiesWid="0.260000"/>
 	</displayTypes>
 	<drivingBehaviors>
-		<drivingBehavior accDecelOwn="-1.000000" accDecelTrail="-1.000000" advMerg="true" amberA="1.588581" amberB1="-0.261981" amberB2="0.269453" amberBehav="CONTINUOUSCHECK" carFollowModType="WIEDEMANN74" consNextTurn="false" coopDecel="-3.000000" coopLnChg="false" coopLnChgCollTm="10.000000" coopLnChgSpeedDiff="10.800000" decelRedDistOwn="100.000000" decelRedDistTrail="100.000000" desLatPos="MIDDLE" diamQueu="false" diffusTm="60.000000" freeDrivTm="11.000000" latDirChgMinTm="0.000000" latDistDrivDef="1.000000" latDistStandDef="0.200000" lnChgRule="FREELANESELECTION" lookAheadDistMax="250.000000" lookAheadDistMin="0.000000" lookBackDistMax="150.000000" lookBackDistMin="0.000000" maxDecelOwn="-4.000000" maxDecelTrail="-3.000000" mesoMaxWaitTm="120.000000" mesoReactTm="1.200000" mesoStandDist="2.000000" minCollTmGain="2.000000" minHdwy="0.500000" minSpeedForLat="3.600000" name="Urban (motorized)" no="1" obsrvAdjLn="false" obsrvdVehs="4" ovtLDef="false" ovtRDef="false" ovtRedSpeedAreas="false" rearCorr="false" rearCorrEnd="10.000000" rearCorrMaxSpeed="3.000000" rearCorrStart="1.000000" redAmberBehav="GO" safDistFactLnChg="0.600000" safDistFactSig="0.600000" safDistFactSigEnd="100.000000" safDistFactSigStart="100.000000" sleepDur="0.000000" sleepProb="0.000000" smthClsup="true" standDist="0.500000" standDistIsFix="false" vehRoutDecLookAhead="true" w74ax="2.000000" w74bxAdd="2.000000" w74bxMult="3.000000" w99cc0="1.500000" w99cc1="0.900000" w99cc2="4.000000" w99cc3="-8.000000" w99cc4="-0.350000" w99cc5="0.350000" w99cc6="11.440000" w99cc7="0.250000" w99cc8="3.500000" w99cc9="1.500000"/>
+		<drivingBehavior accDecelOwn="-1.000000" accDecelTrail="-1.000000" advMerg="true" amberA="1.588581" amberB1="-0.261981" amberB2="0.269453" amberBehav="CONTINUOUSCHECK" carFollowModType="WIEDEMANN99" consNextTurn="false" coopDecel="-3.000000" coopLnChg="false" coopLnChgCollTm="10.000000" coopLnChgSpeedDiff="10.800000" decelRedDistOwn="100.000000" decelRedDistTrail="100.000000" desLatPos="MIDDLE" diamQueu="false" diffusTm="60.000000" freeDrivTm="11.000000" latDirChgMinTm="0.000000" latDistDrivDef="1.000000" latDistStandDef="0.200000" lnChgRule="FREELANESELECTION" lookAheadDistMax="250.000000" lookAheadDistMin="0.000000" lookBackDistMax="150.000000" lookBackDistMin="0.000000" maxDecelOwn="-4.000000" maxDecelTrail="-3.000000" mesoMaxWaitTm="120.000000" mesoReactTm="1.200000" mesoStandDist="2.000000" minCollTmGain="2.000000" minHdwy="0.500000" minSpeedForLat="3.600000" name="Urban (motorized)" no="1" obsrvAdjLn="false" obsrvdVehs="4" ovtLDef="false" ovtRDef="false" ovtRedSpeedAreas="false" rearCorr="false" rearCorrEnd="10.000000" rearCorrMaxSpeed="3.000000" rearCorrStart="1.000000" redAmberBehav="GO" safDistFactLnChg="0.600000" safDistFactSig="0.600000" safDistFactSigEnd="100.000000" safDistFactSigStart="100.000000" sleepDur="0.000000" sleepProb="0.000000" smthClsup="true" standDist="0.500000" standDistIsFix="false" vehRoutDecLookAhead="true" w74ax="2.000000" w74bxAdd="2.000000" w74bxMult="3.000000" w99cc0="1.500000" w99cc1="0.900000" w99cc2="4.000000" w99cc3="-8.000000" w99cc4="-0.350000" w99cc5="0.350000" w99cc6="11.440000" w99cc7="0.250000" w99cc8="3.500000" w99cc9="1.500000"/>
 		<drivingBehavior accDecelOwn="-1.000000" accDecelTrail="-0.500000" advMerg="true" amberA="1.588581" amberB1="-0.261981" amberB2="0.269453" amberBehav="CONTINUOUSCHECK" carFollowModType="WIEDEMANN99" consNextTurn="false" coopDecel="-3.000000" coopLnChg="false" coopLnChgCollTm="10.000000" coopLnChgSpeedDiff="10.800000" decelRedDistOwn="200.000000" decelRedDistTrail="200.000000" desLatPos="MIDDLE" diamQueu="false" diffusTm="60.000000" freeDrivTm="11.000000" latDirChgMinTm="0.000000" latDistDrivDef="1.000000" latDistStandDef="0.200000" lnChgRule="OUTSIDERULE" lookAheadDistMax="250.000000" lookAheadDistMin="0.000000" lookBackDistMax="150.000000" lookBackDistMin="0.000000" maxDecelOwn="-4.000000" maxDecelTrail="-3.000000" mesoMaxWaitTm="120.000000" mesoReactTm="1.200000" mesoStandDist="2.000000" minCollTmGain="2.000000" minHdwy="0.500000" minSpeedForLat="3.600000" name="Right-side rule (motorized)" no="2" obsrvAdjLn="false" obsrvdVehs="2" ovtLDef="false" ovtRDef="false" ovtRedSpeedAreas="false" rearCorr="false" rearCorrEnd="10.000000" rearCorrMaxSpeed="3.000000" rearCorrStart="1.000000" redAmberBehav="GO" safDistFactLnChg="0.600000" safDistFactSig="0.600000" safDistFactSigEnd="100.000000" safDistFactSigStart="100.000000" sleepDur="0.000000" sleepProb="0.000000" smthClsup="true" standDist="0.500000" standDistIsFix="false" vehRoutDecLookAhead="true" w74ax="2.000000" w74bxAdd="2.000000" w74bxMult="3.000000" w99cc0="1.500000" w99cc1="0.900000" w99cc2="4.000000" w99cc3="-8.000000" w99cc4="-0.350000" w99cc5="0.350000" w99cc6="11.440000" w99cc7="0.250000" w99cc8="3.500000" w99cc9="1.500000"/>
 		<drivingBehavior accDecelOwn="-1.000000" accDecelTrail="-0.500000" advMerg="true" amberA="1.588581" amberB1="-0.261981" amberB2="0.269453" amberBehav="CONTINUOUSCHECK" carFollowModType="WIEDEMANN99" consNextTurn="false" coopDecel="-3.000000" coopLnChg="false" coopLnChgCollTm="10.000000" coopLnChgSpeedDiff="10.800000" decelRedDistOwn="200.000000" decelRedDistTrail="200.000000" desLatPos="MIDDLE" diamQueu="false" diffusTm="60.000000" freeDrivTm="11.000000" latDirChgMinTm="0.000000" latDistDrivDef="1.000000" latDistStandDef="0.200000" lnChgRule="FREELANESELECTION" lookAheadDistMax="250.000000" lookAheadDistMin="0.000000" lookBackDistMax="150.000000" lookBackDistMin="0.000000" maxDecelOwn="-4.000000" maxDecelTrail="-3.000000" mesoMaxWaitTm="120.000000" mesoReactTm="1.200000" mesoStandDist="2.000000" minCollTmGain="2.000000" minHdwy="0.500000" minSpeedForLat="3.600000" name="Freeway (free lane selection)" no="3" obsrvAdjLn="false" obsrvdVehs="2" ovtLDef="false" ovtRDef="false" ovtRedSpeedAreas="false" rearCorr="false" rearCorrEnd="10.000000" rearCorrMaxSpeed="3.000000" rearCorrStart="1.000000" redAmberBehav="GO" safDistFactLnChg="0.600000" safDistFactSig="0.600000" safDistFactSigEnd="100.000000" safDistFactSigStart="100.000000" sleepDur="0.000000" sleepProb="0.000000" smthClsup="true" standDist="0.500000" standDistIsFix="false" vehRoutDecLookAhead="true" w74ax="2.000000" w74bxAdd="2.000000" w74bxMult="3.000000" w99cc0="1.500000" w99cc1="0.900000" w99cc2="4.000000" w99cc3="-8.000000" w99cc4="-0.350000" w99cc5="0.350000" w99cc6="11.440000" w99cc7="0.250000" w99cc8="3.500000" w99cc9="1.500000"/>
 		<drivingBehavior accDecelOwn="-1.000000" accDecelTrail="-1.000000" advMerg="true" amberA="1.588581" amberB1="-0.261981" amberB2="0.269453" amberBehav="CONTINUOUSCHECK" carFollowModType="NOINTERACTION" consNextTurn="false" coopDecel="-3.000000" coopLnChg="false" coopLnChgCollTm="10.000000" coopLnChgSpeedDiff="10.800000" decelRedDistOwn="100.000000" decelRedDistTrail="100.000000" desLatPos="ANY" diamQueu="false" diffusTm="60.000000" freeDrivTm="11.000000" latDirChgMinTm="0.000000" latDistDrivDef="1.000000" latDistStandDef="0.200000" lnChgRule="FREELANESELECTION" lookAheadDistMax="250.000000" lookAheadDistMin="0.000000" lookBackDistMax="150.000000" lookBackDistMin="0.000000" maxDecelOwn="-4.000000" maxDecelTrail="-3.000000" mesoMaxWaitTm="120.000000" mesoReactTm="1.200000" mesoStandDist="2.000000" minCollTmGain="2.000000" minHdwy="0.500000" minSpeedForLat="3.600000" name="Footpath (no interaction)" no="4" obsrvAdjLn="false" obsrvdVehs="2" ovtLDef="false" ovtRDef="false" ovtRedSpeedAreas="false" rearCorr="false" rearCorrEnd="10.000000" rearCorrMaxSpeed="3.000000" rearCorrStart="1.000000" redAmberBehav="GO" safDistFactLnChg="0.600000" safDistFactSig="0.600000" safDistFactSigEnd="100.000000" safDistFactSigStart="100.000000" sleepDur="0.000000" sleepProb="0.000000" smthClsup="true" standDist="0.500000" standDistIsFix="false" vehRoutDecLookAhead="true" w74ax="2.000000" w74bxAdd="2.000000" w74bxMult="3.000000" w99cc0="1.500000" w99cc1="0.900000" w99cc2="4.000000" w99cc3="-8.000000" w99cc4="-0.350000" w99cc5="0.350000" w99cc6="11.440000" w99cc7="0.250000" w99cc8="3.500000" w99cc9="1.500000"/>
@@ -1104,28 +1102,7 @@
 				</lane>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="SB-T" no="3" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<geometry>
-				<points3D>
-					<point3D x="4.607688" y="578.697126" zOffset="0.000000"/>
-					<point3D x="9.562748" y="441.227179" zOffset="0.000000"/>
-					<point3D x="10.464493" y="367.055995" zOffset="0.000000"/>
-					<point3D x="9.728395" y="256.247655" zOffset="0.000000"/>
-					<point3D x="10.115549" y="203.642178" zOffset="0.000000"/>
-					<point3D x="8.875951" y="106.717474" zOffset="0.000000"/>
-					<point3D x="3.224836" y="-0.619710" zOffset="0.000000"/>
-				</points3D>
-			</geometry>
-			<lanes>
-				<lane width="3.500000">
-					<noLnChL allVehTypes="true"/>
-				</lane>
-				<lane width="3.500000">
-					<noLnChR allVehTypes="true"/>
-				</lane>
-			</lanes>
-		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="SB-L" no="4" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="SB-L" no="3" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="9.911539" y="578.318279" zOffset="0.000000"/>
@@ -1141,7 +1118,7 @@
 				<lane width="3.500000"/>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="WB-RT" no="5" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="WB-RT" no="4" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="911.399414" y="-27.351772" zOffset="0.000000"/>
@@ -1158,7 +1135,7 @@
 				<lane width="3.500000"/>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="WB-T" no="6" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="WB-T" no="5" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="911.348902" y="-30.988695" zOffset="0.000000"/>
@@ -1175,7 +1152,7 @@
 				<lane width="3.500000"/>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="WB-L" no="7" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="WB-L" no="6" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="911.298387" y="-34.625621" zOffset="0.000000"/>
@@ -1192,7 +1169,7 @@
 				<lane width="3.500000"/>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="NB-RT" no="8" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="NB-RT" no="7" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="20.041775" y="-941.214358" zOffset="0.000000"/>
@@ -1203,7 +1180,7 @@
 				<lane width="3.500000"/>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="NB-T" no="9" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="NB-T" no="8" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="16.500048" y="-941.229957" zOffset="0.000000"/>
@@ -1216,7 +1193,7 @@
 				</lane>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="NB-L" no="10" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="NB-L" no="9" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="11.247038" y="-941.232149" zOffset="0.000000"/>
@@ -1232,7 +1209,7 @@
 				</lane>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="EB-R" no="11" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="EB-R" no="10" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="-924.466777" y="-232.683456" zOffset="0.000000"/>
@@ -1254,7 +1231,7 @@
 				<lane width="3.500000"/>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="EB-T" no="12" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="EB-T" no="11" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="-924.667640" y="-227.462868" zOffset="0.000000"/>
@@ -1281,7 +1258,7 @@
 				</lane>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="EB-L" no="13" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="EB-L" no="12" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="-924.514919" y="-220.292803" zOffset="0.000000"/>
@@ -1308,7 +1285,7 @@
 				</lane>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="SB-L" no="14" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="SB-L" no="13" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="16.731165" y="-2.014512" zOffset="0.000000"/>
@@ -1329,7 +1306,7 @@
 				</lane>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="WB-L" no="15" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="WB-L" no="14" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="29.909020" y="-29.250523" zOffset="0.000000"/>
@@ -1351,7 +1328,7 @@
 				</lane>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="NB-L" no="16" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="NB-L" no="15" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="-1.772909" y="-40.884326" zOffset="0.000000"/>
@@ -1367,7 +1344,7 @@
 				</lane>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="EB-L" no="17" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="EB-L" no="16" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<geometry>
 				<points3D>
 					<point3D x="-15.837631" y="-14.567967" zOffset="0.000000"/>
@@ -1410,7 +1387,7 @@
 					<noLnChL allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="17 1" pos="0.577044"/>
+			<toLinkEndPt lane="16 1" pos="0.577044"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="SB-T" no="10001" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
 			<fromLinkEndPt lane="2 1" pos="579.005370"/>
@@ -1430,10 +1407,10 @@
 					<noLnChR allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="16 1" pos="0.453367"/>
+			<toLinkEndPt lane="15 1" pos="0.453367"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="SB-L" no="10002" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<fromLinkEndPt lane="4 1" pos="579.119720"/>
+			<fromLinkEndPt lane="3 1" pos="579.119720"/>
 			<geometry>
 				<points3D>
 					<point3D x="8.552468" y="-0.546859" zOffset="0.000000"/>
@@ -1449,10 +1426,10 @@
 					<noLnChR allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="15 2" pos="0.294444"/>
+			<toLinkEndPt lane="14 2" pos="0.294444"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="WB-R" no="10003" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<fromLinkEndPt lane="5 1" pos="883.283958"/>
+			<fromLinkEndPt lane="4 1" pos="883.283958"/>
 			<geometry>
 				<points3D>
 					<point3D x="30.199588" y="-14.998328" zOffset="0.000000"/>
@@ -1468,10 +1445,10 @@
 					<noLnChL allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="14 1" pos="0.523465"/>
+			<toLinkEndPt lane="13 1" pos="0.523465"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="WB-T1" no="10004" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<fromLinkEndPt lane="5 1" pos="882.296611"/>
+			<fromLinkEndPt lane="4 1" pos="882.296611"/>
 			<geometry>
 				<points3D>
 					<point3D x="31.186920" y="-14.992805" zOffset="0.000000"/>
@@ -1483,10 +1460,10 @@
 					<noLnChL allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="17 1" pos="0.453340"/>
+			<toLinkEndPt lane="16 1" pos="0.453340"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="WB-T" no="10005" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<fromLinkEndPt lane="6 1" pos="882.985735"/>
+			<fromLinkEndPt lane="5 1" pos="882.985735"/>
 			<geometry>
 				<points3D>
 					<point3D x="30.447295" y="-18.633582" zOffset="0.000000"/>
@@ -1498,10 +1475,10 @@
 					<noLnChR allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="17 2" pos="0.214184"/>
+			<toLinkEndPt lane="16 2" pos="0.214184"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="WB-L" no="10006" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<fromLinkEndPt lane="7 1" pos="883.309058"/>
+			<fromLinkEndPt lane="6 1" pos="883.309058"/>
 			<geometry>
 				<points3D>
 					<point3D x="30.073462" y="-22.272317" zOffset="0.000000"/>
@@ -1517,10 +1494,10 @@
 					<noLnChR allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="16 2" pos="0.330996"/>
+			<toLinkEndPt lane="15 2" pos="0.330996"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="NB-R" no="10007" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<fromLinkEndPt lane="8 1" pos="900.000249"/>
+			<fromLinkEndPt lane="7 1" pos="900.000249"/>
 			<geometry>
 				<points3D>
 					<point3D x="19.694794" y="-41.214176" zOffset="0.000000"/>
@@ -1536,10 +1513,10 @@
 					<noLnChL allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="15 1" pos="0.281198"/>
+			<toLinkEndPt lane="14 1" pos="0.281198"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="NB-T1" no="10008" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<fromLinkEndPt lane="8 1" pos="899.137182"/>
+			<fromLinkEndPt lane="7 1" pos="899.137182"/>
 			<geometry>
 				<points3D>
 					<point3D x="19.695127" y="-42.077243" zOffset="0.000000"/>
@@ -1555,10 +1532,10 @@
 					<noLnChL allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="14 1" pos="0.601290"/>
+			<toLinkEndPt lane="13 1" pos="0.601290"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="NB-T" no="10009" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<fromLinkEndPt lane="9 1" pos="900.262553"/>
+			<fromLinkEndPt lane="8 1" pos="900.262553"/>
 			<geometry>
 				<points3D>
 					<point3D x="16.152967" y="-40.967471" zOffset="0.000000"/>
@@ -1574,10 +1551,10 @@
 					<noLnChR allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="14 2" pos="0.024557"/>
+			<toLinkEndPt lane="13 2" pos="0.024557"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="NB-L" no="10010" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<fromLinkEndPt lane="10 1" pos="899.647819"/>
+			<fromLinkEndPt lane="9 1" pos="899.647819"/>
 			<geometry>
 				<points3D>
 					<point3D x="10.900194" y="-41.584397" zOffset="0.000000"/>
@@ -1596,10 +1573,10 @@
 					<noLnChR allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="17 1" pos="0.703376"/>
+			<toLinkEndPt lane="16 1" pos="0.703376"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="EB-R" no="10011" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<fromLinkEndPt lane="11 1" pos="936.888599"/>
+			<fromLinkEndPt lane="10 1" pos="936.888599"/>
 			<geometry>
 				<points3D>
 					<point3D x="-16.810228" y="-34.453314" zOffset="0.000000"/>
@@ -1613,10 +1590,10 @@
 					<noLnChL allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="16 1" pos="0.205914"/>
+			<toLinkEndPt lane="15 1" pos="0.205914"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="EB-T" no="10012" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<fromLinkEndPt lane="12 1" pos="937.281347"/>
+			<fromLinkEndPt lane="11 1" pos="937.281347"/>
 			<geometry>
 				<points3D>
 					<point3D x="-16.618343" y="-29.232019" zOffset="0.000000"/>
@@ -1635,10 +1612,10 @@
 					<noLnChR allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="15 1" pos="0.288865"/>
+			<toLinkEndPt lane="14 1" pos="0.288865"/>
 		</link>
 		<link assumSpeedOncom="60.000000" costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" hasOvtLn="false" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500.000000" mesoFollowUpGap="0.000000" mesoSpeed="50.000000" mesoSpeedModel="VEHICLEBASED" name="EB-L" no="10013" ovtOnlyPT="false" ovtSpeedFact="1.300000" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
-			<fromLinkEndPt lane="13 1" pos="937.207591"/>
+			<fromLinkEndPt lane="12 1" pos="937.207591"/>
 			<geometry>
 				<points3D>
 					<point3D x="-16.539378" y="-22.062087" zOffset="0.000000"/>
@@ -1657,7 +1634,7 @@
 					<noLnChR allVehTypes="true"/>
 				</lane>
 			</lanes>
-			<toLinkEndPt lane="14 1" pos="0.543066"/>
+			<toLinkEndPt lane="13 1" pos="0.543066"/>
 		</link>
 	</links>
 	<locationDistributions>
@@ -2282,21 +2259,19 @@
 	</occupancyDistributions>
 	<pavementMarkings>
 		<pavementMarking arrowDir="RIGHT" lane="1 1" length="5.000000" name="" no="1" pos="570.249417" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="LEFT" lane="4 1" length="5.000000" name="" no="2" pos="569.685324" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="STRAIGHT" lane="3 1" length="5.000000" name="" no="3" pos="569.418404" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="STRAIGHT" lane="3 2" length="5.000000" name="" no="4" pos="569.650585" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="RIGHT,STRAIGHT" lane="5 1" length="5.000000" name="" no="5" pos="876.875845" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="STRAIGHT" lane="6 1" length="5.000000" name="" no="6" pos="875.095990" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="LEFT" lane="7 1" length="5.000000" name="" no="7" pos="874.675815" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="LEFT" lane="10 2" length="5.000000" name="" no="8" pos="894.694245" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="LEFT" lane="10 1" length="5.000000" name="" no="9" pos="894.569782" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="STRAIGHT" lane="9 1" length="5.000000" name="" no="10" pos="894.321354" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="RIGHT,STRAIGHT" lane="8 1" length="5.000000" name="" no="11" pos="894.429682" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="RIGHT" lane="11 1" length="5.000000" name="" no="12" pos="927.166966" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="STRAIGHT" lane="12 1" length="5.000000" name="" no="13" pos="927.476131" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="STRAIGHT" lane="12 2" length="5.000000" name="" no="14" pos="927.765290" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="LEFT" lane="13 1" length="5.000000" name="" no="15" pos="927.234808" rndDir="" type="ARROW"/>
-		<pavementMarking arrowDir="LEFT" lane="13 2" length="5.000000" name="" no="16" pos="927.110584" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="LEFT" lane="3 1" length="5.000000" name="" no="2" pos="569.685324" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="RIGHT,STRAIGHT" lane="4 1" length="5.000000" name="" no="5" pos="876.875845" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="STRAIGHT" lane="5 1" length="5.000000" name="" no="6" pos="875.095990" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="LEFT" lane="6 1" length="5.000000" name="" no="7" pos="874.675815" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="LEFT" lane="9 2" length="5.000000" name="" no="8" pos="894.694245" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="LEFT" lane="9 1" length="5.000000" name="" no="9" pos="894.569782" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="STRAIGHT" lane="8 1" length="5.000000" name="" no="10" pos="894.321354" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="RIGHT,STRAIGHT" lane="7 1" length="5.000000" name="" no="11" pos="894.429682" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="RIGHT" lane="10 1" length="5.000000" name="" no="12" pos="927.166966" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="STRAIGHT" lane="11 1" length="5.000000" name="" no="13" pos="927.476131" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="STRAIGHT" lane="11 2" length="5.000000" name="" no="14" pos="927.765290" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="LEFT" lane="12 1" length="5.000000" name="" no="15" pos="927.234808" rndDir="" type="ARROW"/>
+		<pavementMarking arrowDir="LEFT" lane="12 2" length="5.000000" name="" no="16" pos="927.110584" rndDir="" type="ARROW"/>
 	</pavementMarkings>
 	<pedestrianClasses>
 		<pedestrianClass color="ff000000" name="Man, Woman" no="10" usePedTypeColor="true">
@@ -2436,19 +2411,19 @@
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="1 1" localNo="0" name="SB-R" no="1" pos="579.111989" sg="1 1" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="2 1" localNo="0" name="SB-T1" no="2" pos="579.145055" sg="1 2" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="2 2" localNo="0" name="SB-T2" no="3" pos="579.217701" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="4 1" localNo="0" name="SB-L" no="4" pos="579.088708" sg="1 4" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="5 1" localNo="0" name="WB-RT" no="5" pos="883.253338" sg="1 5" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="6 1" localNo="0" name="WB-T" no="6" pos="883.154273" sg="1 6" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="7 1" localNo="0" name="WB-L" no="7" pos="883.097070" sg="1 7" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="8 1" localNo="0" name="NB-RT" no="8" pos="899.643015" sg="1 8" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="9 1" localNo="0" name="NB-T" no="9" pos="899.532476" sg="1 9" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="10 1" localNo="0" name="NB-L1" no="10" pos="899.533665" sg="1 10" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="10 2" localNo="0" name="NB-L2" no="11" pos="899.598534" sg="1 11" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="11 1" localNo="0" name="EB-R" no="12" pos="936.952241" sg="1 12" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="12 1" localNo="0" name="EB-T1" no="13" pos="937.138385" sg="1 13" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="12 2" localNo="0" name="EB-T2" no="14" pos="937.147206" sg="1 14" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="13 1" localNo="0" name="EB-L1" no="15" pos="937.050028" sg="1 15" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="13 2" localNo="0" name="EB-L2" no="16" pos="937.055608" sg="1 16" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="3 1" localNo="0" name="SB-L" no="4" pos="579.088708" sg="1 4" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="4 1" localNo="0" name="WB-RT" no="5" pos="883.253338" sg="1 5" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="5 1" localNo="0" name="WB-T" no="6" pos="883.154273" sg="1 6" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="6 1" localNo="0" name="WB-L" no="7" pos="883.097070" sg="1 7" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="7 1" localNo="0" name="NB-RT" no="8" pos="899.643015" sg="1 8" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="8 1" localNo="0" name="NB-T" no="9" pos="899.532476" sg="1 9" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="9 1" localNo="0" name="NB-L1" no="10" pos="899.533665" sg="1 10" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="9 2" localNo="0" name="NB-L2" no="11" pos="899.598534" sg="1 11" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="10 1" localNo="0" name="EB-R" no="12" pos="936.952241" sg="1 12" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="11 1" localNo="0" name="EB-T1" no="13" pos="937.138385" sg="1 13" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="11 2" localNo="0" name="EB-T2" no="14" pos="937.147206" sg="1 14" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="12 1" localNo="0" name="EB-L1" no="15" pos="937.050028" sg="1 15" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="12 2" localNo="0" name="EB-L2" no="16" pos="937.055608" sg="1 16" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 	</signalHeads>
 	<simulation comment="" numCores="1" numRuns="1" randSeed="744" randSeedIncr="1" retroSync="false" simMode="MICRO" simPeriod="3600" simRes="1" simSpeed="5.000000" startTm="0.000000" useAllCores="true" useMaxSimSpeed="true" volumeIncrDynAssign="0.000000"/>
 	<timeDistributions>
@@ -2552,99 +2527,99 @@
 		<vehicleInput anmFlag="false" link="1" name="SB-R" no="1">
 			<timeIntVehVols>
 				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
-				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="0.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="2" name="SB-T" no="2">
 			<timeIntVehVols>
 				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
-				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="0.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
-		<vehicleInput anmFlag="false" link="4" name="SB-L" no="3">
+		<vehicleInput anmFlag="false" link="3" name="SB-L" no="3">
 			<timeIntVehVols>
 				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
-				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="0.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
-		<vehicleInput anmFlag="false" link="5" name="WB-RT" no="4">
+		<vehicleInput anmFlag="false" link="4" name="WB-RT" no="4">
 			<timeIntVehVols>
 				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
-				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="0.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
-		<vehicleInput anmFlag="false" link="6" name="WB-T" no="5">
+		<vehicleInput anmFlag="false" link="5" name="WB-T" no="5">
 			<timeIntVehVols>
 				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
-				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="0.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
-		<vehicleInput anmFlag="false" link="7" name="WB-T" no="6">
+		<vehicleInput anmFlag="false" link="6" name="WB-T" no="6">
 			<timeIntVehVols>
 				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
-				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="0.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
-		<vehicleInput anmFlag="false" link="8" name="NB-RT" no="7">
+		<vehicleInput anmFlag="false" link="7" name="NB-RT" no="7">
 			<timeIntVehVols>
 				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
-				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="0.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
-		<vehicleInput anmFlag="false" link="9" name="NB-T" no="8">
+		<vehicleInput anmFlag="false" link="8" name="NB-T" no="8">
 			<timeIntVehVols>
 				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
-				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="0.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
-		<vehicleInput anmFlag="false" link="10" name="NB-L" no="9">
+		<vehicleInput anmFlag="false" link="9" name="NB-L" no="9">
 			<timeIntVehVols>
 				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
-				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="0.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
-		<vehicleInput anmFlag="false" link="11" name="EB-R" no="10">
+		<vehicleInput anmFlag="false" link="10" name="EB-R" no="10">
 			<timeIntVehVols>
 				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
-				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="0.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
-		<vehicleInput anmFlag="false" link="12" name="EB-T" no="11">
+		<vehicleInput anmFlag="false" link="11" name="EB-T" no="11">
 			<timeIntVehVols>
 				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
-				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="0.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
-		<vehicleInput anmFlag="false" link="13" name="EB-R" no="12">
+		<vehicleInput anmFlag="false" link="12" name="EB-R" no="12">
 			<timeIntVehVols>
 				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="EXACT" volume="50.000000"/>
-				<timeIntervalVehVolume cont="true" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="50.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 1800000" vehComp="1" volType="EXACT" volume="0.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 	</vehicleInputs>
 	<vehicleRoutingDecisionsStatic>
-		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="5" name="" no="1" pos="845.253528">
+		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="4" name="" no="1" pos="845.253528">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="14" destPos="31.383716" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="13" destPos="31.383716" name="" no="1" relFlow="">
 					<linkSeq>
 						<intObjectRef key="10003"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="17" destPos="22.290387" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="16" destPos="22.290387" name="" no="2" relFlow="">
 					<linkSeq>
 						<intObjectRef key="10004"/>
 					</linkSeq>
 				</vehicleRouteStatic>
 			</vehRoutSta>
 		</vehicleRoutingDecisionStatic>
-		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="8" name="" no="2" pos="858.791705">
+		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="7" name="" no="2" pos="858.791705">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="15" destPos="31.831868" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="14" destPos="31.831868" name="" no="1" relFlow="">
 					<linkSeq>
 						<intObjectRef key="10007"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="14" destPos="7.401755" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="13" destPos="7.401755" name="" no="2" relFlow="">
 					<linkSeq>
 						<intObjectRef key="10008"/>
 					</linkSeq>
@@ -2652,6 +2627,56 @@
 			</vehRoutSta>
 		</vehicleRoutingDecisionStatic>
 	</vehicleRoutingDecisionsStatic>
+	<vehicleTravelTimeMeasurements>
+		<vehicleTravelTimeMeasurement name="" no="1">
+			<end link="1" pos="579.572044"/>
+			<start link="1" pos="122.372044"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="2">
+			<end link="2" pos="579.572044"/>
+			<start link="2" pos="122.372044"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="3">
+			<end link="3" pos="579.572044"/>
+			<start link="3" pos="122.372044"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="4">
+			<end link="4" pos="883.626194"/>
+			<start link="4" pos="426.426194"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="5">
+			<end link="5" pos="883.626194"/>
+			<start link="5" pos="426.426194"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="6">
+			<end link="6" pos="883.626194"/>
+			<start link="6" pos="426.426194"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="7">
+			<end link="7" pos="900.350589"/>
+			<start link="7" pos="443.150589"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="8">
+			<end link="8" pos="900.350589"/>
+			<start link="8" pos="443.150589"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="9">
+			<end link="9" pos="900.350589"/>
+			<start link="9" pos="443.150589"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="10">
+			<end link="10" pos="937.675300"/>
+			<start link="10" pos="480.475300"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="11">
+			<end link="11" pos="937.675300"/>
+			<start link="11" pos="480.475300"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="12">
+			<end link="12" pos="937.675300"/>
+			<start link="12" pos="480.475300"/>
+		</vehicleTravelTimeMeasurement>
+	</vehicleTravelTimeMeasurements>
 	<vehicleTypes>
 		<vehicleType alightTm="0.000000" anmFlag="false" boardTm="0.000000" capacity="0" category="CAR" clearTm="0.000000" colorDistr1="1" desAccelFunc="1" desDecelFunc="1" distCoeffPerMeter="0.000000" dwellTmIsAdd="true" equip="" extDriver="false" extDriverDLLFile="" extDriverParFile="" extEmissionDLLFile="" linkCostCoeff="1.000000" maxAccelFunc="1" maxDecelFunc="1" model2D3DDistr="10" name="Car" no="100" occupDistr="1" travTmCoeff="1.000000">
 			<parkLotSelPars>
