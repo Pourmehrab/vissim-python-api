@@ -28,20 +28,20 @@ set(Vissim.Simulation, 'AttValue', 'SimRes', SimRes);
 
 
 % Extract link lenghts from Vissim model
-VissimData.OptRange = zeros(intersectionConfig.NoOfLanes,1);
-VissimData.LaneLength = zeros(intersectionConfig.NoOfLanes,1);
+VissimData.OptRange = zeros(intersectionConfig.NoOfLinks,1);
+VissimData.LinkLength = zeros(intersectionConfig.NoOfLinks,1);
 
 map = [1,2,2,3,4,5,6,7,8,9,9,10,11,11,12,12];
 Vissim.Net.DataCollectionPoints.SetAllAttValues('Pos',0);
-for lane = 1:intersectionConfig.NoOfLinks
-    laneLength = get(Vissim.Net.Links.ItemByKey(lane),'AttValue','length2D');
-    VissimData.OptRange(lane) = laneLength - dr ;
+for link = 1:intersectionConfig.NoOfLinks
+    linkLength = get(Vissim.Net.Links.ItemByKey(link),'AttValue','length2D');
+    VissimData.OptRange(link) = linkLength - dr ;
     
     %     YOU NEED LANE NO, NOT LINK NO FOR THIS
     %     set(Vissim.Net.DataCollectionPoints.ItemByKey(lane), 'AttValue', 'Pos',VissimData.OptRange(lane));
     
-    VissimData.LaneLength(lane) = laneLength;
-    set(Vissim.Net.VehicleTravelTimeMeasurements.ItemByKey( lane ),'AttValue','StartPos',VissimData.OptRange(lane));
-    set(Vissim.Net.VehicleTravelTimeMeasurements.ItemByKey( lane ),'AttValue','EndPos',laneLength);
+    VissimData.LinkLength(link) = linkLength;
+    set(Vissim.Net.VehicleTravelTimeMeasurements.ItemByKey( link ),'AttValue','StartPos',VissimData.OptRange(link));
+    set(Vissim.Net.VehicleTravelTimeMeasurements.ItemByKey( link ),'AttValue','EndPos',linkLength);
 end
 

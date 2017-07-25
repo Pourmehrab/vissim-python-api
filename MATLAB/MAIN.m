@@ -146,7 +146,7 @@ while  simParameters.globalTime < End_of_veh_input || ... % Termination Criteria
         end
     end
     
-    implementTrajectories(vehicles, intersectionConfig, simParameters);
+    implementTrajectories
     
     Vissim.Simulation.RunSingleStep; % move simulation one step further
     

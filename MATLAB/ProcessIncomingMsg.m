@@ -6,25 +6,28 @@ newVehArrived  =  zeros(intersectionConfig.NoOfLanes,1);
 %==========================================================================
 
 All_Vehicles    = Vissim.Net.Vehicles.GetAll; % get all vehicles in the network at the actual simulation second
+VISS_MAT_veh    = zeros(length(All_Vehicles), 5); % VISS Link, VISS Lane, 
+% Lane, VehIndx, Status 1: served
 
-
-VissimVehCount = Vissim.Net.Vehicles.Count;
-
+VissimVehCount  = Vissim.Net.Vehicles.Count;
 
 for vehIndx = 1:VissimVehCount
     
     id = get(All_Vehicles{vehIndx},'AttValue','No');
     %     lane = str2double(get(All_Vehicles{vehIndx}.Lane,'AttValue','Link'));
     LaneLink = sscanf(get(All_Vehicles{vehIndx},'AttValue','Lane'),'%d',[1 2]);
-    Vissim_link_number = LaneLink(1);
-    Vissim_lane_number = -LaneLink(2);
-    lane = intersectionConfig.mapLink2Lane(Vissim_link_number,Vissim_lane_number);
+    VISS_MAT_veh(vehIndx, :) = [LaneLink(1), -LaneLink(2), ...
+        intersectionConfig.mapLink2Lane(LaneLink(1),-LaneLink(2)),...
+        0, 0];
+%     Vissim_link_number = LaneLink(1);
+%     Vissim_lane_number = -LaneLink(2);
+%     lane = intersectionConfig.mapLink2Lane(Vissim_link_number,Vissim_lane_number);
     
     % we need this to see if add this vehicle or not
     loc = find(vehicles(lane).vehID == id);
     pos = get(All_Vehicles{vehIndx},'AttValue','Pos'); % in foot
     
-    if isempty(loc) && pos >= VissimData.OptRange(lane) % only add non-existing vehicle that is in the detection range
+    if isempty(loc) && pos >= VissimData.OptRange(map(lane)) && lane <= intersectionConfig.NoOfLanes % only add non-existing vehicle that is in the detection range
         
         % HERE TAKE THE CONTROL OF THIS VEHICLE FORM TO VISSIM (FIND THE RIGHT ID)
         set(All_Vehicles{vehIndx}, 'AttValue', 'ExtContr', 4);
@@ -43,6 +46,8 @@ for vehIndx = 1:VissimVehCount
         
         VI = vehicles(lane).vehIndx;
         
+        VISS_MAT_veh(vehIndx, 4) = VI(2);
+        
         timeDiff  =  simParameters.globalTime - simParameters.refFullTime;
         
         % RECORD NEW ARRIVAL IN THIS LANE
@@ -54,7 +59,7 @@ for vehIndx = 1:VissimVehCount
         vehicles(lane).ID(VI(2))                 =  id;
         vehicles(lane).initTime(VI(2))           =  timeDiff;
         vehicles(lane).currSpeed(VI(2))          =  speed;
-        vehicles(lane).trajectory{(VI(2))}(1,:)  =  [simParameters.globalTime VissimData.LaneLength(lane) - pos ];
+        vehicles(lane).trajectory{(VI(2))}(1,:)  =  [simParameters.globalTime VissimData.LinkLength(map(lane)) - pos ];
         vehicles(lane).trajPointIndx(VI(2),:)    =  [1,1];
         vehicles(lane).length(VI(2))             =  get(All_Vehicles{vehIndx},'AttValue','Length');
         vehicles(lane).maxAccRate(VI(2))         =  11.5;  % ft/s2
