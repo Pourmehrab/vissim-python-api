@@ -42,7 +42,7 @@ End_of_simulation       =   30  * 60  *  2              ;    % simulation second
 % 15 min data collection, up to 30 min for network evacuation
 End_of_veh_input        =   0.5 * End_of_simulation     ;
 
-SimRes                  =   10                          ;    % number of steps in a sec
+SimRes                  =   2                          ;    % number of steps in a sec
 % the inverse of this should not exceed trajectory resolution
 
 

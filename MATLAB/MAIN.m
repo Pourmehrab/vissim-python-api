@@ -101,14 +101,74 @@ if profile_code
 end
 
 numVehs = 0;
+currFullTime = Vissim.Simulation.SimulationSecond;
+All_Vehicles    = Vissim.Net.Vehicles.GetAll; % get all vehicles in the network at the actual simulation second
+VissimVehCount  = Vissim.Net.Vehicles.Count;
+VISS_MAT_veh    = zeros(length(All_Vehicles), 6); % VISS Link, VISS Lane,
+
 while  simParameters.globalTime < End_of_veh_input || ... % Termination Criteria
         numVehs         ~=          0
     
-    %     currFullTime = currFullTime + timeIncrement;
-    currFullTime = Vissim.Simulation.SimulationSecond;
-    ProcessIncomingMsg;
+        %%     MONITOR AND UPDATE
     
-    %     currFullTime  =  datetime('now');
+    All_Vehicles    = Vissim.Net.Vehicles.GetAll; % get all vehicles in the network at the actual simulation second
+    VissimVehCount  = Vissim.Net.Vehicles.Count;
+    VISS_MAT_veh_Dummy    = zeros(length(All_Vehicles), 6);
+    
+    %     update the MATLAB knowledge about vehicles in VISSIM
+    for ii = 1  :   VissimVehCount
+        id = get(All_Vehicles{ii},'AttValue','No');
+        LaneLink = sscanf(get(All_Vehicles{ii},'AttValue','Lane'),'%d',[1 2]);
+        if length(LaneLink) == 1 % vehcicle is on connector
+            VISS_MAT_veh_Dummy(ii, 5) = -1;
+            continue
+        elseif LaneLink(1) > intersectionConfig.NoOfLinks % vehicle is on a discharge link
+            VISS_MAT_veh_Dummy(ii, 5) = -1;
+            continue
+        end
+        lane = intersectionConfig.mapLink2Lane(LaneLink(1),-LaneLink(2));
+        
+        loc = find(VISS_MAT_veh(:,6) == id);
+        if ~isempty(loc) % true if the vehicle was in matlab
+            VISS_MAT_veh_Dummy(ii, :) = VISS_MAT_veh(loc, :);
+            
+            vehIndx = VISS_MAT_veh_Dummy(ii,4);
+            if vehIndx == 0
+                continue
+            else
+                % check if it is served
+                locc = find(vehicles(lane).trajectory{vehIndx}(:,1)  >  simParameters.globalTime, 1, 'first');
+                if VISS_MAT_veh_Dummy(ii, 5) == 0 && isempty(locc) % true if vehicle is unserved and no future traj point is available
+                    
+                    % remove served vehicles
+                    VISS_MAT_veh_Dummy(ii, 5) = 1; % mark it as served
+                    fwrite(TTFile,[lane vehicles(lane).initTime(vehIndx) vehicles(lane).trajectory{vehIndx}(vehicles(lane).trajPointIndx(vehIndx,2),1) vehicles(lane).idealTraj(vehIndx,7) vehicles(lane).trajectory{vehIndx}(vehicles(lane).trajPointIndx(vehIndx,1),1) vehicles(lane).type(vehIndx)]*1000,'int');
+                    
+                    % HERE TAKE THE CONTROL OF THIS VEHICLE BACK TO VISSIM
+                    set(All_Vehicles{ii}, 'AttValue', 'ExtContr', 1);
+                    set(All_Vehicles{ii}, 'AttValue', 'Speed', vehicles(lane).desiredSpeed(vehIndx) * 3600/5280); % convert fts to mph
+                    
+                    existingVeh(lane)   =   existingVeh(lane)   -   1       ;
+                    
+                    if vehIndx == vehicles(lane).vehIndx(2)
+                        vehicles(lane).vehIndx(1) = 0;
+                        vehicles(lane).vehIndx(2) = 0;
+                        %                     break;
+                    else
+                        vehIndx     =   1  +   mod(vehIndx,intersectionConfig.maxNo(lane).vehsPerLane);
+                        vehicles(lane).vehIndx(1) = vehIndx;
+                    end
+                end
+                
+            end
+        else
+            VISS_MAT_veh_Dummy(ii, :) = [LaneLink(1), -LaneLink(2), lane, 0, 0, id];
+        end
+    end
+    VISS_MAT_veh    =       VISS_MAT_veh_Dummy    ;
+    
+    %%     PROCESS INCOMING VEHICLES
+    ProcessIncomingMsg;
     
     if sum(  newVehArrived  )  ~=  0
         
@@ -148,10 +208,12 @@ while  simParameters.globalTime < End_of_veh_input || ... % Termination Criteria
     
     implementTrajectories
     
+    %% MOVE FORWARD
     Vissim.Simulation.RunSingleStep; % move simulation one step further
     
+    currFullTime = Vissim.Simulation.SimulationSecond;
     simParameters.globalTime  =  currFullTime - simParameters.refFullTime;
-    
+    %% ADJUST SIGNALIZATION
     if signal.nextPhasesG(1)    >=  timeIncrement
         signal.nextPhasesG(1)    =  signal.nextPhasesG(1) - timeIncrement;
         
@@ -188,39 +250,7 @@ while  simParameters.globalTime < End_of_veh_input || ... % Termination Criteria
     
     
     
-    %     MONITOR AND UPDATE
-    for lane  =  1:intersectionConfig.NoOfLanes
-        if vehicles(lane).vehIndx(1) ~= 0
-            
-            NoOfVehs       = mod(vehicles(lane).vehIndx(2) - vehicles(lane).vehIndx(1) + 1, intersectionConfig.maxNo(lane).vehsPerLane);
-            vehCounter     = 0;
-            vehIndx        = vehicles(lane).vehIndx(1);
-            while vehicles(lane).trajectory{vehIndx}(vehicles(lane).trajPointIndx(vehIndx,2),1) <= simParameters.globalTime && vehCounter < NoOfVehs
-                
-                %                 perfMeasure.LastThroughputByLane(1)        =   departTime;
-                %                 perfMeasure.LastThroughputByLane(2)        =   vehicles(lane).initTime(vehIndx);
-                %                 perfMeasure.LastThroughputByLane(lane+2)   =   perfMeasure.LastThroughputByLane(lane+2)+1;
-                %                 fwrite(THFile,perfMeasure.LastThroughputByLane,'float');
-                
-                fwrite(TTFile,[lane vehicles(lane).initTime(vehIndx) vehicles(lane).trajectory{vehIndx}(vehicles(lane).trajPointIndx(vehIndx,2),1) vehicles(lane).idealTraj(vehIndx,7) vehicles(lane).trajectory{vehIndx}(vehicles(lane).trajPointIndx(vehIndx,1),1) vehicles(lane).type(vehIndx)]*1000,'int');
-                
-                vehCounter          =   vehCounter          +   1       ;
-                
-                existingVeh(lane)   =   existingVeh(lane)   -   1       ;
-                
-                % HERE GIVE THE CONTROL OF THIS VEHICLE BACK TO VISSIM (FIND THE RIGHT ID)
-                %                set(All_Vehicles{1}, 'AttValue', 'ExtContr ', 1);
-                if vehIndx == vehicles(lane).vehIndx(2)
-                    vehicles(lane).vehIndx(1) = 0;
-                    vehicles(lane).vehIndx(2) = 0;
-                    break;
-                else
-                    vehIndx     =   1  +   mod(vehIndx,intersectionConfig.maxNo(lane).vehsPerLane);
-                    vehicles(lane).vehIndx(1) = vehIndx;
-                end
-            end
-        end
-    end
+    
 end
 fclose('all');
 
