@@ -1,8 +1,7 @@
 %% Modify the Simulation Parameters
 
 % Chose Random Seed
-% Random_Seed = randi(1000);
-% set(Vissim.Simulation, 'AttValue', 'RandSeed', Random_Seed);
+set(Vissim.Simulation, 'AttValue', 'RandSeed', sc);
 
 % Set a signal controller program:
 SC_number = 1; % SC = SignalController
@@ -19,13 +18,9 @@ set(Vissim.Simulation, 'AttValue', 'UseMaxSimSpeed', true);
 % signal swithes
 set(Vissim.Simulation, 'AttValue', 'SimRes', SimRes);
 
-
-% Vissim.Simulation.RunSingleStep;
-
-% Sim_break_at = 200; % simulation second [s]
-% set(Vissim.Simulation, 'AttValue', 'SimBreakAt', Sim_break_at);
-% Vissim.Simulation.RunContinuous; % Start the simulation until SimBreakAt (200s)
-
+% COMMENT OUT IF ANIMATION IS REQUIRED
+% set(Vissim.Graphics.CurrentNetworkWindow, 'AttValue', 'QuickMode', 1);
+% Vissim.SuspendUpdateGUI; %  stop updating of the complete Vissim workspace (network editor, list, chart and signal time table windows)
 
 % Extract link lenghts from Vissim model
 VissimData.OptRange = zeros(intersectionConfig.NoOfLinks,1);

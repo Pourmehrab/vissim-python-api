@@ -70,7 +70,7 @@ for vehIndx = 1:VissimVehCount
             vehicles(lane).trajReceived(VI(2))    =  0;
             vehicles(lane).served(VI(2))          =  0;
             
-            fprintf('* Lane %d (%d-%d): ID %d; t %3.1f; v %3.1f; d %5.1f; pos %5.1f; type %d\n',lane,VISS_MAT_veh(vehIndx, 1),VISS_MAT_veh(vehIndx, 2), id, timeDiff,  speed,vehicles(lane).trajectory{(VI(2))}(1,2),pos,type)
+%             fprintf('* Lane %d (%d-%d): ID %d; t %3.1f; v %3.1f; d %5.1f; pos %5.1f; type %d\n',lane,VISS_MAT_veh(vehIndx, 1),VISS_MAT_veh(vehIndx, 2), id, timeDiff,  speed,vehicles(lane).trajectory{(VI(2))}(1,2),pos,type)
             
             % TO KNOW WHATS THE FREE FLOW TIME AS A BASELINE FOR DELAY
             % COMPUTATION (ISSUE: SIGNALIZATION IS CONSIDERED NOT FRONT VEHICLE)

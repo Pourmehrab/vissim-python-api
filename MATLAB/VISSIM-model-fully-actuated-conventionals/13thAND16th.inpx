@@ -2391,67 +2391,6 @@
 			</distrDataPts>
 		</powerDistribution>
 	</powerDistributions>
-	<signalControllers>
-		<signalController active="true" cycTm="0" cycTmIsVar="true" debug="false" guiFile="VISSIG_GUI.dll" name="SignalController" no="1" offset="0" progFile="VISSIG_Controller.dll" progNo="1" scDetRecLabelDet="PORTNUMBER" scDetRecLabelSG="NUMBER" scDetRecShortNam="false" sigTmsTabAutoConfig="true" sigTmsTabLabelDet="PORTNUMBER" sigTmsTabLabelSG="NUMBER" supplyFile1="#exe#vissig.config" supplyFile2="#data#13thAND16th1.sig" supplyFile3="" type="FIXEDTIME">
-			<sgs>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 1" no="1" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 2" no="2" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 3" no="3" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 4" no="4" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 5" no="5" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 6" no="6" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 7" no="7" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 8" no="8" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 9" no="9" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 10" no="10" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 11" no="11" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 12" no="12" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 13" no="13" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 14" no="14" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 15" no="15" redAmber="0" type="NORMAL"/>
-				<signalGroup amber="3" greenFlsh="0" minGreen="5" minRed="1" name="Signal group 16" no="16" redAmber="0" type="NORMAL"/>
-			</sgs>
-			<sigTmsTabConfig>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 1" title="" varNo="1" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 2" title="" varNo="2" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 3" title="" varNo="3" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 4" title="" varNo="4" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 5" title="" varNo="5" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 6" title="" varNo="6" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 7" title="" varNo="7" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 8" title="" varNo="8" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 9" title="" varNo="9" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 10" title="" varNo="10" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 11" title="" varNo="11" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 12" title="" varNo="12" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 13" title="" varNo="13" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 14" title="" varNo="14" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 15" title="" varNo="15" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 16" title="" varNo="16" wttFilename="vissim"/>
-			</sigTmsTabConfig>
-			<wttFiles>
-				<intObjectRef key="1"/>
-			</wttFiles>
-		</signalController>
-	</signalControllers>
-	<signalHeads>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="1 1" localNo="0" name="SB-R" no="1" pos="579.111989" sg="1 1" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="2 1" localNo="0" name="SB-T1" no="2" pos="579.145055" sg="1 2" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="2 2" localNo="0" name="SB-T2" no="3" pos="579.217701" sg="1 3" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="3 1" localNo="0" name="SB-L" no="4" pos="579.088708" sg="1 4" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="4 1" localNo="0" name="WB-RT" no="5" pos="883.253338" sg="1 5" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="5 1" localNo="0" name="WB-T" no="6" pos="883.154273" sg="1 6" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="6 1" localNo="0" name="WB-L" no="7" pos="883.09707" sg="1 7" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="7 1" localNo="0" name="NB-RT" no="8" pos="899.643015" sg="1 8" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="8 1" localNo="0" name="NB-T" no="9" pos="899.532476" sg="1 9" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="9 1" localNo="0" name="NB-L1" no="10" pos="899.533665" sg="1 10" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="9 2" localNo="0" name="NB-L2" no="11" pos="899.598534" sg="1 11" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="10 1" localNo="0" name="EB-R" no="12" pos="936.952241" sg="1 12" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="11 1" localNo="0" name="EB-T1" no="13" pos="937.138385" sg="1 13" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="11 2" localNo="0" name="EB-T2" no="14" pos="937.147206" sg="1 14" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="12 1" localNo="0" name="EB-L1" no="15" pos="937.050028" sg="1 15" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="12 2" localNo="0" name="EB-L2" no="16" pos="937.055608" sg="1 16" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
-	</signalHeads>
 	<simulation comment="" numCores="1" numRuns="1" randSeed="1990" randSeedIncr="1" retroSync="false" simMode="MICRO" simPeriod="1500" simRes="1" simSpeed="5" startTm="0" useAllCores="true" useMaxSimSpeed="true" volumeIncrDynAssign="0"/>
 	<timeDistributions>
 		<timeDistribution mean="20" name="20 s ±" no="1" stdDev="2" type="NORMAL"/>
@@ -2777,9 +2716,6 @@
 			</parkLotSelPars>
 		</vehicleType>
 	</vehicleTypes>
-	<wttFiles>
-		<wttFile file="#exe#VISSIG.wtt" no="1"/>
-	</wttFiles>
 	<walkingBehaviors>
 		<walkingBehavior aSocIso="2.72" aSocMean="0.4" bSocIso="0.2" bSocMean="2.8" lambda="0.176" name="Default" no="1" noise="1.2" reactToN="8" sidePref="NONE" tau="0.4" vd="3"/>
 		<walkingBehavior aSocIso="2.72" aSocMean="0.4" bSocIso="0.2" bSocMean="2.8" lambda="0.176" name="Elevator (In Cab)" no="2" noise="0.3" reactToN="8" sidePref="NONE" tau="0.4" vd="3"/>

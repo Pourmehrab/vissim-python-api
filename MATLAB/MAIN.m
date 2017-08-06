@@ -84,11 +84,6 @@ signal.nextPhasesAR       = [intersectionConfig.AR];
 switchSignal( Vissim, 1, phasesLib(signal.nextPhasesSeq(1)).Lanes, 'GREEN' ); % possible values e.g. 'GREEN', 'RED', 'AMBER', 'REDAMBER'
 
 
-%DO NOT RECORD THIS SIGNAL DECISION SINCE NO VEHICLE CAN USE IT
-currFullTime              = simParameters.refFullTime;
-
-% currFullTime  =  datetime('now');
-
 %% MAIN CONTROL LOOP
 timeIncrement = 1 / SimRes; % this would be the time step length to oush forward simulation
 
@@ -100,14 +95,11 @@ if profile_code
     profile on
 end
 
-numVehs = 0;
 currFullTime = Vissim.Simulation.SimulationSecond;
 All_Vehicles    = Vissim.Net.Vehicles.GetAll; % get all vehicles in the network at the actual simulation second
 VissimVehCount  = Vissim.Net.Vehicles.Count;
 VISS_MAT_veh    = zeros(length(All_Vehicles), 6); % VISS Link, VISS Lane,
-
-while  simParameters.globalTime < End_of_veh_input || ... % Termination Criteria
-        numVehs         ~=          0
+while  simParameters.globalTime + timeIncrement < End_of_simulation %|| numVehs         ~=          0 % Termination Criteria
     
         %%     MONITOR AND UPDATE
     
@@ -144,6 +136,8 @@ while  simParameters.globalTime < End_of_veh_input || ... % Termination Criteria
                     VISS_MAT_veh_Dummy(ii, 5) = 1; % mark it as served
                     fwrite(TTFile,[lane vehicles(lane).initTime(vehIndx) vehicles(lane).trajectory{vehIndx}(vehicles(lane).trajPointIndx(vehIndx,2),1) vehicles(lane).idealTraj(vehIndx,7) vehicles(lane).trajectory{vehIndx}(vehicles(lane).trajPointIndx(vehIndx,1),1) vehicles(lane).type(vehIndx)]*1000,'int');
                     
+                    Nserved = Nserved + 1;
+                    TT = (Nserved - 1) * TT/Nserved + (vehicles(lane).trajectory{vehIndx}(vehicles(lane).trajPointIndx(vehIndx,2),1) - vehicles(lane).initTime(vehIndx))/Nserved;
                     % HERE TAKE THE CONTROL OF THIS VEHICLE BACK TO VISSIM
                     set(All_Vehicles{ii}, 'AttValue', 'ExtContr', 1);
                     set(All_Vehicles{ii}, 'AttValue', 'Speed', vehicles(lane).desiredSpeed(vehIndx) * 3600/5280); % convert fts to mph
@@ -247,17 +241,12 @@ while  simParameters.globalTime < End_of_veh_input || ... % Termination Criteria
         signal.nextPhasesG = tLag - intersectionConfig.Y;  % THIS WAY WE ARE ALWAYS READY FOR NEW VEHICLES WHILE SIGNAL DECISION NEVER GETS EMPTY
         fwrite(SCFile,[simParameters.globalTime signal.nextPhasesSeq(end) signal.nextPhasesG(end) signal.nextPhasesY(end) signal.nextPhasesAR(end)]*1000,'int');
     end
-    
-    
-    
-    
 end
 fclose('all');
-
+Vissim.Simulation.RunContinuous;
 if profile_code
     profsave
     profile viewer
 end
-
 save(['scenario',num2str(sc),'_output.mat']);
 %

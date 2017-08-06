@@ -18,9 +18,9 @@ set(Rel_Flows{2}, 'AttValue', 'RelFlow',          r); % Changing the relative fl
 
 % Set Flow (Unit?):
 
-Vissim.Net.VehicleInputs.SetAllAttValues('Cont(2)',false)
-Vissim.Net.VehicleInputs.SetAllAttValues('Volume(1)',f)
-Vissim.Net.VehicleInputs.SetAllAttValues('Volume(2)',0)
+Vissim.Net.VehicleInputs.SetAllAttValues('Cont(2)',false);
+Vissim.Net.VehicleInputs.SetAllAttValues('Volume(1)',f);
+Vissim.Net.VehicleInputs.SetAllAttValues('Volume(2)',0);
 
 %% ========================================================================
 % Saving the Network
