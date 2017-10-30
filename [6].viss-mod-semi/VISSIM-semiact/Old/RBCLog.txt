@@ -1,0 +1,78 @@
+-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 3:29:09 PM) ###
+-----------------------------------------------------------------
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 3:19:10 PM) ###
+-----------------------------------------------------------------
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017 -- 1:15:48 PM) ###
+-----------------------------------------------------------------
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017 -- 1:15:30 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 3:19:10 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 1:15:48 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017 -- 1:15:30 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 3:19:10 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 1:15:48 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017 -- 1:15:30 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 3:19:10 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 1:15:48 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017 -- 1:15:30 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 3:19:10 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 1:15:48 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017 -- 1:15:30 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 3:19:10 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 1:15:48 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017 -- 1:15:30 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+### (Tuesday, September 26, 2017-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 3:19:10 PM) ###
+[SUCCESS] : RBCGUI::LoadSettings() --> Settings Loaded
+[SUCCESS] : RBCGUI::SaveFile(C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th.rbc) --> File Saved
+-----------------------------------------------------------------
+### (Tuesday, September 26, 2017 -- 1:15:48 PM) ###

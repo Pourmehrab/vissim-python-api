@@ -1,0 +1,61 @@
+$VISION
+* File:		C:\Users\mmgasulla\Dropbox\0. UF\VISSIM-semiact\13thAND16th_MMG.inpx
+* Comment:	
+* Date:		9/25/2017 11:28:34 PM
+* PTV Vissim:	9.00 [07]
+* 
+* Table: Link Segment Results
+* 
+* SIMRUN: SimRun, Simulation run (Number of simulation run)
+* TIMEINT: TimeInt, Time interval
+* LINKEVALSEGMENT: LinkEvalSegment, Link evaluation segment
+* DELAYREL(ALL): DelayRel(All), Delay (relative) (All) (Delay (relative): Delay percentage Link delay time share [s/s] of total travel time)
+* DELAYREL(10): DelayRel(10), Delay (relative) (10) (Delay (relative): Delay percentage Link delay time share [s/s] of total travel time)
+* DELAYREL(70): DelayRel(70), Delay (relative) (70) (Delay (relative): Delay percentage Link delay time share [s/s] of total travel time)
+* SPEED(ALL): Speed(All), Speed (All) (Average speed) [km/h]
+* SPEED(10): Speed(10), Speed (10) (Average speed) [km/h]
+* SPEED(70): Speed(70), Speed (70) (Average speed) [km/h]
+* VOLUME(ALL): Volume(All), Volume (All) (Volume [veh/h]) [veh/h]
+* VOLUME(10): Volume(10), Volume (10) (Volume [veh/h]) [veh/h]
+* VOLUME(70): Volume(70), Volume (70) (Volume [veh/h]) [veh/h]
+* LINKEVALSEGMENT\LINK: LinkEvalSegment\Link, Link evaluation segment\Link (Number of the link, on which the Link evaluation segments is located)
+* LINKEVALSEGMENT\LANE\LINK: LinkEvalSegment\Lane\Link, Link evaluation segment\Lane\Link (Number of the link or connector, in which the lane is located)
+* LINKEVALSEGMENT\LINK\NO: LinkEvalSegment\Link\No, Link evaluation segment\Link\Number (Unique number of the link or connector)
+* LINKEVALSEGMENT\LINK\NAME: LinkEvalSegment\Link\Name, Link evaluation segment\Link\Name (Name of the link or connector)
+* 
+* SimRun; TimeInt; LinkEvalSegment; DelayRel(All); DelayRel(10); DelayRel(70); Speed(All); Speed(10); Speed(70); Volume(All); Volume(10); Volume(70); LinkEvalSegment\Link; LinkEvalSegment\Lane\Link; LinkEvalSegment\Link\No; LinkEvalSegment\Link\Name
+*
+$LINKEVALSEGMENTEVALUATION:SIMRUN;TIMEINT;LINKEVALSEGMENT;DELAYREL(ALL);DELAYREL(10);DELAYREL(70);SPEED(ALL);SPEED(10);SPEED(70);VOLUME(ALL);VOLUME(10);VOLUME(70);LINKEVALSEGMENT\LINK;LINKEVALSEGMENT\LANE\LINK;LINKEVALSEGMENT\LINK\NO;LINKEVALSEGMENT\LINK\NAME
+1;300-1500;1-1-0-500;0.00 %;;0.00 %;54.05;;54.05;39.00;0.00;39.00;1;1;1;SB-R
+1;300-1500;1-1-500-1000;0.00 %;;0.00 %;54.02;;54.02;38.96;0.00;38.96;1;1;1;SB-R
+1;300-1500;2-1-0-500;0.00 %;;0.00 %;52.74;;52.74;34.71;0.00;34.71;2;2;2;SB-T
+1;300-1500;2-1-500-1000;0.00 %;;0.00 %;52.77;;52.77;35.96;0.00;35.96;2;2;2;SB-T
+1;300-1500;2-2-0-500;0.00 %;;0.00 %;51.05;;51.05;6.00;0.00;6.00;2;2;2;SB-T
+1;300-1500;2-2-500-1000;0.00 %;;0.00 %;51.05;;51.05;5.99;0.00;5.99;2;2;2;SB-T
+1;300-1500;3-1-0-500;0.00 %;;0.00 %;53.19;;53.19;42.00;0.00;42.00;3;3;3;SB-L
+1;300-1500;3-1-500-1000;0.00 %;;0.00 %;53.19;;53.19;41.96;0.00;41.96;3;3;3;SB-L
+1;300-1500;4-1-0-500;0.00 %;;0.00 %;52.07;;52.07;42.69;0.00;42.69;4;4;4;WB-RT
+1;300-1500;4-1-500-1000;0.00 %;;0.00 %;51.86;;51.86;44.91;0.00;44.91;4;4;4;WB-RT
+1;300-1500;5-1-0-500;0.00 %;;0.00 %;52.18;;52.18;39.00;0.00;39.00;5;5;5;WB-T
+1;300-1500;5-1-500-1000;0.00 %;;0.00 %;52.18;;52.18;38.95;0.00;38.95;5;5;5;WB-T
+1;300-1500;6-1-0-500;0.00 %;;0.00 %;52.74;;52.74;36.00;0.00;36.00;6;6;6;WB-L
+1;300-1500;6-1-500-1000;0.00 %;;0.00 %;52.78;;52.78;38.74;0.00;38.74;6;6;6;WB-L
+1;300-1500;7-1-0-500;0.00 %;;0.00 %;53.48;;53.48;42.00;0.00;42.00;7;7;7;NB-RT
+1;300-1500;7-1-500-1000;0.00 %;;0.00 %;53.48;;53.48;41.91;0.00;41.91;7;7;7;NB-RT
+1;300-1500;8-1-0-500;0.00 %;;0.00 %;53.58;;53.58;30.65;0.00;30.65;8;8;8;NB-T
+1;300-1500;8-1-500-999;0.00 %;;0.00 %;53.19;;53.19;33.49;0.00;33.49;8;8;8;NB-T
+1;300-1500;9-1-0-500;0.00 %;;0.00 %;52.67;;52.67;30.28;0.00;30.28;9;9;9;NB-L
+1;300-1500;9-1-500-1000;0.00 %;;0.00 %;52.81;;52.81;32.95;0.00;32.95;9;9;9;NB-L
+1;300-1500;9-2-0-500;0.00 %;;0.00 %;53.26;;53.26;12.00;0.00;12.00;9;9;9;NB-L
+1;300-1500;9-2-500-1000;0.00 %;;0.00 %;53.26;;53.26;11.98;0.00;11.98;9;9;9;NB-L
+1;300-1500;10-1-0-500;0.00 %;;0.00 %;53.13;;53.13;33.00;0.00;33.00;10;10;10;EB-R
+1;300-1500;10-1-500-1000;0.00 %;;0.00 %;53.13;;53.13;32.95;0.00;32.95;10;10;10;EB-R
+1;300-1500;11-1-0-500;0.00 %;;0.00 %;51.17;;51.17;39.00;0.00;39.00;11;11;11;EB-T
+1;300-1500;11-1-500-999;0.00 %;;0.00 %;51.17;;51.17;38.97;0.00;38.97;11;11;11;EB-T
+1;300-1500;11-2-0-500;0.00 %;;0.00 %;55.71;;55.71;6.00;0.00;6.00;11;11;11;EB-T
+1;300-1500;11-2-500-999;0.00 %;;0.00 %;55.71;;55.71;6.00;0.00;6.00;11;11;11;EB-T
+1;300-1500;12-1-0-500;0.00 %;;0.00 %;54.57;;54.57;32.76;0.00;32.76;12;12;12;EB-L
+1;300-1500;12-1-500-1000;0.00 %;;0.00 %;54.47;;54.47;34.63;0.00;34.63;12;12;12;EB-L
+1;300-1500;12-2-0-500;0.00 %;;0.00 %;57.75;;57.75;3.00;0.00;3.00;12;12;12;EB-L
+1;300-1500;12-2-500-1000;0.00 %;;0.00 %;55.81;;55.81;5.61;0.00;5.61;12;12;12;EB-L
+

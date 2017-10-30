@@ -1,0 +1,29 @@
+$VISION
+* File:		C:\Users\mpourmehrab\Dropbox (UFL)\[3].project\[2].papers\[4].MATLAB.in.the.loop.and.reservation.comparison.ASCE\[2].code.COM\MATLAB\vissim-semi-actuated-conventionals\VISSIM-semiact\Fully\13thAND16th.inpx
+* Comment:	
+* Date:		10/11/2017 5:07:56 PM
+* PTV Vissim:	9.00 [07]
+* 
+* Table: Link Segment Results
+* 
+* SIMRUN: SimRun, Simulation run (Number of simulation run)
+* TIMEINT: TimeInt, Time interval
+* LINKEVALSEGMENT: LinkEvalSegment, Link evaluation segment
+* DELAYREL(ALL): DelayRel(All), Delay (relative) (All) (Delay (relative): Delay percentage Link delay time share [s/s] of total travel time)
+* DELAYREL(10): DelayRel(10), Delay (relative) (10) (Delay (relative): Delay percentage Link delay time share [s/s] of total travel time)
+* DELAYREL(70): DelayRel(70), Delay (relative) (70) (Delay (relative): Delay percentage Link delay time share [s/s] of total travel time)
+* SPEED(ALL): Speed(All), Speed (All) (Average speed) [km/h]
+* SPEED(10): Speed(10), Speed (10) (Average speed) [km/h]
+* SPEED(70): Speed(70), Speed (70) (Average speed) [km/h]
+* VOLUME(ALL): Volume(All), Volume (All) (Volume [veh/h]) [veh/h]
+* VOLUME(10): Volume(10), Volume (10) (Volume [veh/h]) [veh/h]
+* VOLUME(70): Volume(70), Volume (70) (Volume [veh/h]) [veh/h]
+* LINKEVALSEGMENT\LINK: LinkEvalSegment\Link, Link evaluation segment\Link (Number of the link, on which the Link evaluation segments is located)
+* LINKEVALSEGMENT\LANE\LINK: LinkEvalSegment\Lane\Link, Link evaluation segment\Lane\Link (Number of the link or connector, in which the lane is located)
+* LINKEVALSEGMENT\LINK\NO: LinkEvalSegment\Link\No, Link evaluation segment\Link\Number (Unique number of the link or connector)
+* LINKEVALSEGMENT\LINK\NAME: LinkEvalSegment\Link\Name, Link evaluation segment\Link\Name (Name of the link or connector)
+* 
+* SimRun; TimeInt; LinkEvalSegment; DelayRel(All); DelayRel(10); DelayRel(70); Speed(All); Speed(10); Speed(70); Volume(All); Volume(10); Volume(70); LinkEvalSegment\Link; LinkEvalSegment\Lane\Link; LinkEvalSegment\Link\No; LinkEvalSegment\Link\Name
+*
+$LINKEVALSEGMENTEVALUATION:SIMRUN;TIMEINT;LINKEVALSEGMENT;DELAYREL(ALL);DELAYREL(10);DELAYREL(70);SPEED(ALL);SPEED(10);SPEED(70);VOLUME(ALL);VOLUME(10);VOLUME(70);LINKEVALSEGMENT\LINK;LINKEVALSEGMENT\LANE\LINK;LINKEVALSEGMENT\LINK\NO;LINKEVALSEGMENT\LINK\NAME
+
